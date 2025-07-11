@@ -12,50 +12,48 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 Lista das aplicações Flatpak:
  
-
-| ID application                                   | Nome                               |
-|-------------------------------------------------|----------------------------------|
-| app.devsuite.Ptyxis                             | Ptyxis                           |
-| be.alexandervanhee.gradia                       | Gradia                          |
-| com.bitwarden.desktop                           | Bitwarden                      |
-| com.calibre_ebook.calibre                       | calibre                        |
-| com.github.jeromerobert.pdfarranger             | PDF Arranger                   |
-| com.github.neithern.g4music                     | Gapless                       |
-| com.github.PintaProject.Pinta                    | Pinta                         |
-| com.mattjakeman.ExtensionManager                | Gerenciador de Extensões       |
-| com.protonvpn.www                               | Proton VPN                    |
-| com.vivaldi.Vivaldi                             | Vivaldi                       |
-| com.warlordsoftwares.youtube-downloader-4ktube | 4KTUBE                        |
-| de.haeckerfelix.Fragments                       | Fragments                     |
-| garden.jamie.Morphosis                          | Morphosis                     |
-| io.ente.auth                                    | Ente Auth                     |
+| ID application                                   | Nome                              |
+|-------------------------------------------------|------------------------------------|
+| app.devsuite.Ptyxis                             | Ptyxis                             |
+| be.alexandervanhee.gradia                       | Gradia                             |
+| com.bitwarden.desktop                           | Bitwarden                          |
+| com.calibre_ebook.calibre                       | calibre                            |
+| com.github.jeromerobert.pdfarranger             | PDF Arranger                       |
+| com.github.neithern.g4music                     | Gapless                            | 
+| com.github.PintaProject.Pinta                    | Pinta                             |
+| com.mattjakeman.ExtensionManager                | Gerenciador de Extensões           |
+| com.protonvpn.www                               | Proton VPN                         |
+| com.vivaldi.Vivaldi                             | Vivaldi                            |
+| com.warlordsoftwares.youtube-downloader-4ktube | 4KTUBE                              |
+| de.haeckerfelix.Fragments                       | Fragments                          |
+| garden.jamie.Morphosis                          | Morphosis                          |
+| io.ente.auth                                    | Ente Auth                          |
 | io.github.celluloid_player.Celluloid            | Reprodutor de Multimídia Celluloid |
-| io.github.dvlv.boxbuddyrs                       | BoxBuddy                      |
-| net.cozic.joplin_desktop                        | Joplin                        |
-| org.freefilesync.FreeFileSync                   | FreeFileSync                  |
-| org.gnome.baobab                                | Analisador de uso de disco    |
-| org.gnome.Calculator                            | Calculadora                   |
-| org.gnome.Calendar                              | Calendário                   |
-| org.gnome.Characters                            | Caracteres                   |
-| org.gnome.clocks                                | Relógios                     |
-| org.gnome.Connections                           | Conexões                     |
-| org.gnome.Evince                                | Visualizador de documentos   |
-| org.gnome.font-viewer                           | Fontes                       |
-| org.gnome.gitlab.YaLTeR.VideoTrimmer            | Video Trimmer                |
-| org.gnome.gThumb                                | Visualizador de imagens gThumb |
-| org.gnome.Logs                                  | Logs                         |
-| org.gnome.Loupe                                 | Visualizador de imagens      |
-| org.gnome.SimpleScan                            | Digitalizador de documentos  |
-| org.gnome.Snapshot                              | Câmera                       |
-| org.gnome.Solanum                               | Solanum                      |
-| org.gnome.SoundRecorder                         | Gravador de som              |
-| org.gnome.TextEditor                            | Editor de Texto              |
-| org.onlyoffice.desktopeditors                   | ONLYOFFICE Desktop Editors   |
-| org.telegram.desktop                            | Telegram                    |
-| org.upscayl.Upscayl                             | Upscayl                     |
-| page.codeberg.libre_menu_editor.LibreMenuEditor | Menu Principal               |
-| me.timschneeberger.jdsp4linux 		  | JamesDSP               |
-
+| io.github.dvlv.boxbuddyrs                       | BoxBuddy                           |  
+| net.cozic.joplin_desktop                        | Joplin                             |
+| org.freefilesync.FreeFileSync                   | FreeFileSync                       |
+| org.gnome.baobab                                | Analisador de uso de disco         |
+| org.gnome.Calculator                            | Calculadora                        |
+| org.gnome.Calendar                              | Calendário                         |
+| org.gnome.Characters                            | Caracteres                         |
+| org.gnome.clocks                                | Relógios                           |
+| org.gnome.Connections                           | Conexões                           |
+| org.gnome.Evince                                | Visualizador de documentos         |
+| org.gnome.font-viewer                           | Fontes                             |
+| org.gnome.gitlab.YaLTeR.VideoTrimmer            | Video Trimmer                      |
+| org.gnome.gThumb                                | Visualizador de imagens gThumb     |
+| org.gnome.Logs                                  | Logs                               |
+| org.gnome.Loupe                                 | Visualizador de imagens            |
+| org.gnome.SimpleScan                            | Digitalizador de documentos        |
+| org.gnome.Snapshot                              | Câmera                             |
+| org.gnome.Solanum                               | Solanum                            |
+| org.gnome.SoundRecorder                         | Gravador de som                    |
+| org.gnome.TextEditor                            | Editor de Texto                    |
+| org.onlyoffice.desktopeditors                   | ONLYOFFICE Desktop Editors         |
+| org.telegram.desktop                            | Telegram                           |
+| org.upscayl.Upscayl                             | Upscayl                            |
+| page.codeberg.libre_menu_editor.LibreMenuEditor | Menu Principal                     |
+| me.timschneeberger.jdsp4linux 		                | JamesDSP                           |
      
 
 ## Copiar e colar no terminal para instalar:
@@ -83,8 +81,9 @@ flatpak update
 
 
 # RPM
-
+```bash
 sudo dnf install console snapper btrfs-assistant fish virt-manager
+```
 
 #Configurações
 
