@@ -1,18 +1,7 @@
 
-# Flatpak:
-
-Verificar se o repositório Flathub está habilitado:
-
-## 1. Verifica ou habilita o Flathub
-
-```bash
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-```
-
-
-Lista das aplicações Flatpak:
+Lista dos aplicativos Flatpak que uso
  
-| ID application                                   | Nome                              |
+| ID application                                  | Nome                               |
 |-------------------------------------------------|------------------------------------|
 | app.devsuite.Ptyxis                             | Ptyxis                             |
 | be.alexandervanhee.gradia                       | Gradia                             |
@@ -20,11 +9,11 @@ Lista das aplicações Flatpak:
 | com.calibre_ebook.calibre                       | calibre                            |
 | com.github.jeromerobert.pdfarranger             | PDF Arranger                       |
 | com.github.neithern.g4music                     | Gapless                            | 
-| com.github.PintaProject.Pinta                    | Pinta                             |
+| com.github.PintaProject.Pinta                   | Pinta                              |
 | com.mattjakeman.ExtensionManager                | Gerenciador de Extensões           |
 | com.protonvpn.www                               | Proton VPN                         |
 | com.vivaldi.Vivaldi                             | Vivaldi                            |
-| com.warlordsoftwares.youtube-downloader-4ktube | 4KTUBE                              |
+| com.warlordsoftwares.youtube-downloader-4ktube  | 4KTUBE                             |
 | de.haeckerfelix.Fragments                       | Fragments                          |
 | garden.jamie.Morphosis                          | Morphosis                          |
 | io.ente.auth                                    | Ente Auth                          |
@@ -53,16 +42,15 @@ Lista das aplicações Flatpak:
 | org.telegram.desktop                            | Telegram                           |
 | org.upscayl.Upscayl                             | Upscayl                            |
 | page.codeberg.libre_menu_editor.LibreMenuEditor | Menu Principal                     |
-| me.timschneeberger.jdsp4linux 		                | JamesDSP                           |
+| me.timschneeberger.jdsp4linux 		    | JamesDSP                           |
      
 
-## Copiar e colar no terminal para instalar:
+## Instalar todos os flatpak de uma vez:
 
 flatpak install flathub --assumeyes --noninteractive app.devsuite.Ptyxis be.alexandervanhee.gradia com.bitwarden.desktop com.calibre_ebook.calibre com.github.jeromerobert.pdfarranger com.github.neithern.g4music com.github.PintaProject.Pinta com.mattjakeman.ExtensionManager com.protonvpn.www com.vivaldi.Vivaldi com.warlordsoftwares.youtube-downloader-4ktube de.haeckerfelix.Fragments garden.jamie.Morphosis io.ente.auth io.github.celluloid_player.Celluloid io.github.dvlv.boxbuddyrs net.cozic.joplin_desktop org.freefilesync.FreeFileSync org.gnome.baobab org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.clocks org.gnome.Connections org.gnome.Evince org.gnome.font-viewer org.gnome.gitlab.YaLTeR.VideoTrimmer org.gnome.gThumb org.gnome.Logs org.gnome.Loupe org.gnome.SimpleScan org.gnome.Snapshot org.gnome.Solanum org.gnome.SoundRecorder org.gnome.TextEditor org.onlyoffice.desktopeditors org.telegram.desktop org.upscayl.Upscayl page.codeberg.libre_menu_editor.LibreMenuEditor me.timschneeberger.jdsp4linux
 
 
 ## 3. Ajuste de Tema GTK para aplicações Flatpak
-
 
 - Instalar o tema
 ```bash
