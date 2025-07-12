@@ -42,7 +42,7 @@ Lista dos aplicativos Flatpak que uso
 | org.telegram.desktop                            | Telegram                           |
 | org.upscayl.Upscayl                             | Upscayl                            |
 | page.codeberg.libre_menu_editor.LibreMenuEditor | Menu Principal                     |
-| me.timschneeberger.jdsp4linux 		    | JamesDSP                           |
+| me.timschneeberger.jdsp4linux 		  | JamesDSP                           |
      
 
 ## Instalar todos os flatpak de uma vez:
