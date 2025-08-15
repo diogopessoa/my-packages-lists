@@ -1,5 +1,5 @@
 
-Lista dos aplicativos Flatpak que uso
+## Lista dos aplicativos Flatpak que uso
  
 | ID application                                  | Nome                               |
 |-------------------------------------------------|------------------------------------|
@@ -43,7 +43,7 @@ Lista dos aplicativos Flatpak que uso
 | org.upscayl.Upscayl                             | Upscayl                            |
 | io.github.flattool.Ignition                     | Ignition                           |   
 | page.codeberg.libre_menu_editor.LibreMenuEditor | Menu Principal                     |
-| me.timschneeberger.jdsp4linux 		  | JamesDSP                           |
+| me.timschneeberger.jdsp4linux 		                | JamesDSP                           |
      
 
 ## Instalar todos os flatpak de uma vez:
@@ -84,7 +84,7 @@ git clone https://github.com/Mibea/Hatter.git
 
 # RPM
 ```bash
-sudo dnf install console snapper btrfs-assistant fish virt-manager
+sudo dnf install snapper btrfs-assistant fish virt-manager
 ```
 
 #Configurações
@@ -99,7 +99,9 @@ sudo dnf install console snapper btrfs-assistant fish virt-manager
 - Dash to dock
 - Gsconnect 
 - Quick setting audio panel
-- System monitor @gcampax.github
+- Vitals @corecoding
 - Window title is back@fthx
 
+## Salvar e Restaurar as configurações
+O aplicativo "Save Desktop" permite salvar a configuração atual (temas, ícones, papéis de parede, extensões, etc.) com um único clique para restaurar em outra máquina.
 
