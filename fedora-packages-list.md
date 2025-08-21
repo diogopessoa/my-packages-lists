@@ -1,6 +1,6 @@
 
-## Lista dos aplicativos Flatpak que uso
- 
+# Minha lista de aplicativos
+
 | ID application                                  | Nome                               |
 |-------------------------------------------------|------------------------------------|
 | app.devsuite.Ptyxis                             | Ptyxis                             |
@@ -49,12 +49,13 @@
 | com.github.zocker_160.SyncThingy                | Syncthing + simple tray indicator  |  
      
 
-## Instalar todos os flatpak de uma vez:
+## 1. Instalar todos os flatpak de uma vez:
 
+```bash
 flatpak install flathub --assumeyes --noninteractive app.devsuite.Ptyxis be.alexandervanhee.gradia com.bitwarden.desktop com.calibre_ebook.calibre com.github.jeromerobert.pdfarranger com.github.neithern.g4music com.github.PintaProject.Pinta com.mattjakeman.ExtensionManager com.protonvpn.www com.vivaldi.Vivaldi com.warlordsoftwares.youtube-downloader-4ktube de.haeckerfelix.Fragments garden.jamie.Morphosis io.ente.auth io.github.celluloid_player.Celluloid io.github.dvlv.boxbuddyrs md.obsidian.Obsidian org.freefilesync.FreeFileSync org.gnome.baobab org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.clocks org.gnome.Connections org.gnome.Papers org.gnome.font-viewer org.gnome.gitlab.YaLTeR.VideoTrimmer org.gnome.gThumb org.gnome.Logs org.gnome.Loupe org.gnome.SimpleScan org.gnome.Snapshot org.gnome.Solanum org.gnome.SoundRecorder org.gnome.TextEditor org.onlyoffice.desktopeditors org.telegram.desktop org.upscayl.Upscayl page.codeberg.libre_menu_editor.LibreMenuEditor me.timschneeberger.jdsp4linux run page.tesk.Refine org.virt_manager.virt-manager com.github.zocker_160.SyncThingy
+```
 
-
-## 3. Ajuste de Tema GTK para aplicações Flatpak
+## 2. Ajuste de Tema GTK para aplicações Flatpak
 
 - Instalar o tema
 ```bash
@@ -71,7 +72,7 @@ gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
 flatpak update
 ```
 
-## Tema de ícones GTK
+### Tema de ícones GTK
 
 - Hatter
 https://github.com/Mibea/Hatter?tab=readme-ov-file 
@@ -85,12 +86,12 @@ git clone https://github.com/Mibea/Hatter.git
 ```
 
 
-# RPM
+## RPM
 ```bash
 sudo dnf install snapper btrfs-assistant fish
 ```
 
-#Configurações
+## Configurações e Ajustes
 
 ### Btrfs Assistant (X11)
 - pkexec btrfs-assistant (execução no atalho do menu)
@@ -105,6 +106,7 @@ Após instalar o SyncThingy (Flatpak):
  - Pressione "Copiar para a área de transferência"
  - Abra o terminal
  - Cole o comando e pressione Enter e reinicie o sistema.
+ - 
 #### Atalho Syncthing WebUI
  - no navegador de internet, crie um atalho para o menu de aplicativos.
  - agora pode remover a extensão 'AppIndicator'
