@@ -1,0 +1,203 @@
+# **Guia Básico Pós-Instalação do Fedora Silverblue** 
+
+Este guia cobre as configurações básicas após instalar o Fedora Silverblue.  
+
+![Captura de tela Fedora Silverblue](https://raw.githubusercontent.com/diogopessoa/my-packages-lists/main/silverblue/screenshot_silverblue_2025-07-31.png)
+
+## **O que você irá ter com este guia:**
+
+- ✅ **Repositórios adicionais** 
+- ✅ **Substituição de Flatpak do Fedora pelo Flathub** Codecs nativos
+- ✅ **Melhor integração com tema** GTK + Flatpak  
+- ✅ **Extensões do GNOME** opções adicionais 
+- ✅ **Refine** Ajustes do GNOME
+- ✅ **Comandos essenciais** dicas de gerenciamento rpm-ostree
+- ✅ **Distrobox** instalação e criação de container Fedora e Ubuntu
+
+****
+
+## **Passo a Passo**
+
+## **1. Repositórios adicionais**
+
+No meu caso o repositório RPM Fusion não é necessário, pois além da minha máquina ser "full AMD" (os drivers já estão no kernel Linux), a minha prioridade de uso de aplicações no Silverblue é de Flatpaks.
+
+1. **Flatpak/Flathub** já vem com codecs proprietários por padrão.
+2. **Toolbox/Distrobox** quando não há Flatpak, use `dnf install <pacote>` em container.
+3. **rpm-ostree install pacote** só para pacotes realmente essenciais ao sistema que a opção **1** e **2** não substitui.
+
+A necessidade de **habilitar o RPMFusion** é quando precisar drivers ou codecs proprietários no próprio sistema-base (ex.: NVIDIA, GStreamer, ffmpeg para apps nativos (desnecessário se usar Flatpak Flathub). 
+
+### Habilitar repositórios
+
+1. Habilitar manualmente dentro do GNOME Software:
+   
+`GNOME Software > Menu principal > Repositórios de Programas`
+
+Habilita:
+
+- Flathub (Flatpak)
+
+Habilita se necessário:
+- RPM Fusion
+
+2. Reiniciar para aplicar as mudanças.
+
+
+---
+
+## **2. Substituir Flatpaks Fedora por Flatpak do Flathub**
+
+O Fedora inclui seu próprio repositório Flatpak, mas os apps não tem todos os codecs necessários por questões de licenças. Remova os Flatpaks do Fedora e instale apenas do Flathub que já vem com todos os Codecs por padrão.
+
+### **Remova todos os Flatpaks do Fedora:** 
+
+```bash
+flatpak uninstall --all --delete-data --assumeyes
+flatpak remote-delete fedora --force
+flatpak remote-modify --disable fedora  # (opcional, desativa sem remover)
+```
+
+### **Instalar Aplicativos do Flathub (com base no GNOME Core)**  
+
+```bash
+flatpak install flathub --assumeyes --noninteractive org.mozilla.firefox org.gnome.baobab org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.clocks org.gnome.Contacts org.gnome.Decibels org.gnome.font-viewer org.gnome.Logs org.gnome.Loupe org.gnome.Maps org.gnome.Papers io.github.celluloid_player.Celluloid org.gnome.SimpleScan org.gnome.Snapshot org.gnome.TextEditor org.gnome.Weather com.mattjakeman.ExtensionManager
+```
+
+---
+
+### **Aplicativos Adicionais Recomendados**
+
+- **Refine (tweaks)**: ajustes do GNOME em ícones, temas, fontes e outros
+- **Menu Principal**: permite editar os atalhos do menu do sistema
+- **DistroShelf**: interface gráfica para gerenciar containers do Distrobox
+ 
+```bash
+flatpak install flathub --assumeyes --noninteractive page.tesk.Refine page.codeberg.libre_menu_editor.LibreMenuEditor com.ranfdev.DistroShelf
+```
+
+
+## **3. Extensões sugeridas**  
+
+Abra o **Gerenciador de Extensões** e instale:  
+- **Dash to Dock** (melhora o dock)  
+- **Caffeine** (não deixa a máquina suspender)  
+- **Clipboard Indicator** (gerenciador de copiar-colar)  
+- **GSConnect** (integração com Android/KDE Connect)  
+
+
+---
+
+## **4. Instalar o Distrobox no Silveblue**
+
+O Fedora Silverblue já vem com o [Toolbox](https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/) instalado por padrão para criar containers.  
+O [Distrobox.](https://github.com/89luca89/distrobox) tem recursos extras interessantes, como compatibilidade com várias Distros, a opção `-assemble create --file` de criar múltiplos containers de uma vez, e a opção de exportar atalhos para o menu do sistema hospedeiro.
+
+
+Instalar o Distrobox:
+
+```bash
+rpm-ostree install distrobox
+```
+
+Reinicie o sistema para o Silverblue concluir a instalação.
+
+
+### **Gerenciar Containers com DistroShelf**
+---
+
+ O **DistroShelf** é uma Interface gráfica para gerenciar containers do Distrobox, que facilita instalar, clonar, remover containers - além de adicionar atalhos no menu de aplicativos do Silverblue (host).
+
+<u>Observação:</u> o Distrobox não necessita de aplicações extras para criar containers. Veja a [documentação](https://github.com/89luca89/distrobox) oficial.
+
+
+### Containers no Distrobox
+
+![Fedora no Distrobox](https://raw.githubusercontent.com/diogopessoa/my-packages-lists/main/silverblue/fedora-distrobox-2025-08-20%2011-56-12.png)
+
+Como exemplo, podemos criar um container do **Fedora 41** `quay.io/fedora/fedora-toolbox:41` pelo DistroShelf. 
+No terminal do container, podemos adicionar os repositórios extras do Fedora e usar o gerenciador de pacotes **dnf**.
+
+**Habilite o repositórios RPM Fusion no seu Container Fedora**
+
+```bash
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+ ```
+
+
+## **5. Outras Configurações Úteis**
+
+### **Desativar o `NetworkManager-wait-online.service`**
+
+Desativando este serviço, pode reduzir muito o tempo de inicialização do sistema:
+
+```bash
+sudo systemctl disable NetworkManager-wait-online.service
+```
+
+### **Integrar tema GTK + Flatpak**
+
+Referência: https://github.com/lassekongo83/adw-gtk3
+
+**1. Instalar o tema no sistema-base (para apps não-Flatpak):**
+
+```bash
+sudo rpm-ostree install adw-gtk3-theme
+```
+
+**2. Instalar o tema também no Flathub (para apps Flatpak):**
+
+```bash
+flatpak install org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark
+flatpak update
+```
+
+**Ativar o tema no GNOME**
+
+```bash
+sudo flatpak override --filesystem=xdg-data/themes
+sudo flatpak mask org.gtk.Gtk3theme.adw-gtk3
+sudo flatpak mask org.gtk.Gtk3theme.adw-gtk3-dark
+```
+
+Escolha o tema pelo **Refine** ou com o comando:
+
+```bash
+gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
+```
+
+
+---
+
+
+
+## Comandos essenciais para Silverblue
+
+Como o Fedora Silverblue foi projetado para ser um sistema 'inquebrável' e imutável (atômico), os comandos a seguir devem ser usados apenas para conhecimento ou em situações de última instância.
+
+| Comando                         | Descrição                                                       |
+| ------------------------------- | --------------------------------------------------------------- |
+| `rpm-ostree upgrade`            | Busca e prepara atualizações da imagem do sistema               |
+| `rpm-ostree status`             | Mostra a versão atual e atualizações pendentes                  |
+| `rpm-ostree install <pacote>`   | Instala um pacote                                               |
+| `rpm-ostree uninstall <pacote>` | Remove um pacote                                                |
+| `rpm-ostree cleanup -m`         | Limpa versões antigas do sistema                                |
+| `systemctl reboot`              | Reinicia o sistema (necessário após atualizações do rpm-ostree) |
+| `rpm-ostree cancel`             | Cancela uma transação pendente (ex: atualização travada)        |
+| `rpm-ostree rollback`           | Make the previous deployment the default boot entry             |
+
+---
+
+### **💡 Dicas Importantes**
+
+1. Sempre **reiniciar** após `rpm-ostree upgrade` para aplicar atualizações.  
+2. Prefira **Flatpaks** a overlays (`rpm-ostree install`) para manter o sistema imutável.  
+3. Use container com [Toolbox](https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/) ou [Distrobox](https://github.com/89luca89/distrobox) para instalar com `dnf install` ou pacotes RPM (além de outros formatos) que não tem em Flatpak.
+
+## Links úteis para Fedora Silverblue 
+
+- [Distrobox Auto-Upgrade Containers](https://github.com/diogopessoa/distrobox-container-auto-upgrade)
+- [Guia oficial Fedora Silverblue](https://docs.fedoraproject.org/pt_BR/fedora-silverblue/)
+- [Telegram: Comunidade Fedora Brasil](t.me/comunidadefedorabrasil)
+
+
