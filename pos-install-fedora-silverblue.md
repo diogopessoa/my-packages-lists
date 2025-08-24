@@ -163,14 +163,6 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 
 ## **6. Outras Configurações Úteis**
 
-### **Desativar o `NetworkManager-wait-online.service`**
-
-Desativando este serviço, pode reduzir muito o tempo de inicialização do sistema:
-
-```bash
-sudo systemctl disable NetworkManager-wait-online.service
-```
-
 ### **Integrar tema GTK + Flatpak**
 
 Referência: https://github.com/lassekongo83/adw-gtk3
