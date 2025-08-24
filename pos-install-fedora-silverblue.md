@@ -128,7 +128,7 @@ toolbox list
 
 ## **5. Instalar o Distrobox no Silveblue (opcional)**
 
-O [Distrobox](https://github.com/89luca89/distrobox) é bem similar ao Toolbox, mas tem recursos extras interessantes, como compatibilidade com várias Distros, a opção `-assemble create --file` de criar múltiplos containers de uma vez, e a opção de exportar atalhos para o menu do sistema hospedeiro.
+O [Distrobox](https://github.com/89luca89/distrobox) é bem similar ao Toolbox, mas tem algumas funcionalidade extras, a opção `-assemble create --file` de criar múltiplos containers de uma vez, também a opção de exportar atalhos com facilidade para o menu do sistema hospedeiro.
 
 Instalar o Distrobox:
 
@@ -234,6 +234,7 @@ Como o Fedora Silverblue foi projetado para ser um sistema 'inquebrável' e imut
 
 - [Distrobox Auto-Upgrade Containers](https://github.com/diogopessoa/distrobox-container-auto-upgrade)
 - [Guia oficial Fedora Silverblue](https://docs.fedoraproject.org/pt_BR/fedora-silverblue/)
-- [Telegram: Comunidade Fedora Brasil](t.me/comunidadefedorabrasil)
+- [Telegram - Comunidade Fedora Brasil](t.me/comunidadefedorabrasil)
+- [YouTube - Toolbox no Fedora: Crie Ambientes Isolados para Suas Aplicações](https://www.youtube.com/watch?v=t-VuQoQp4gg)
 
 
