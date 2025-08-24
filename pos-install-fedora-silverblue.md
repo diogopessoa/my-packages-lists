@@ -7,12 +7,12 @@ Este guia cobre as configurações básicas após instalar o Fedora Silverblue.
 ## **O que você irá ter com este guia:**
 
 - ✅ **Repositórios adicionais** 
-- ✅ **Substituição de Flatpak do Fedora pelo Flathub** Codecs nativos
-- ✅ **Melhor integração com tema** GTK + Flatpak  
-- ✅ **Extensões do GNOME** opções adicionais 
-- ✅ **Refine** Ajustes do GNOME
-- ✅ **Comandos essenciais** dicas de gerenciamento rpm-ostree
-- ✅ **Distrobox** instalação e criação de container Fedora e Ubuntu
+- ✅ **Substituição de Flatpak do Fedora pelo Flathub:** Codecs nativos
+- ✅ **Melhor integração com tema:** GTK + Flatpak  
+- ✅ **Extensões do GNOME:** Opções adicionais 
+- ✅ **Refine:** Ajustes do GNOME
+- ✅ **Comandos essenciais:** dicas de gerenciamento rpm-ostree
+- ✅ **Distrobox:** instalação e criação de container Fedora e Ubuntu
 
 ****
 
