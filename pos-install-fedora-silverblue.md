@@ -8,11 +8,11 @@ Este guia cobre as configurações básicas após instalar o Fedora Silverblue.
 
 - ✅ **Repositórios adicionais** 
 - ✅ **Substituição de Flatpak do Fedora pelo Flathub:** Codecs nativos
+- ✅ **Toolbox:** ferramenta nativa para criar containers
+- ✅ **Distrobox:** instalação e criação de container Fedora e Ubuntu
 - ✅ **Melhor integração com tema:** GTK + Flatpak  
 - ✅ **Extensões do GNOME:** Opções adicionais 
-- ✅ **Refine:** Ajustes do GNOME
 - ✅ **Comandos essenciais:** dicas de gerenciamento rpm-ostree
-- ✅ **Distrobox:** instalação e criação de container Fedora e Ubuntu
 
 ****
 
@@ -61,7 +61,7 @@ flatpak remote-modify --disable fedora  # (opcional, desativa sem remover)
 ### **Instalar Aplicativos do Flathub (com base no GNOME Core)**  
 
 ```bash
-flatpak install flathub --assumeyes --noninteractive org.mozilla.firefox org.gnome.baobab org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.clocks org.gnome.Contacts org.gnome.Decibels org.gnome.font-viewer org.gnome.Logs org.gnome.Loupe org.gnome.Maps org.gnome.Papers io.github.celluloid_player.Celluloid org.gnome.SimpleScan org.gnome.Snapshot org.gnome.TextEditor org.gnome.Weather com.mattjakeman.ExtensionManager
+flatpak install flathub --assumeyes --noninteractive org.mozilla.firefox org.gnome.baobab org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.clocks org.gnome.Contacts org.gnome.Decibels org.gnome.font-viewer org.gnome.Logs org.gnome.Connections org.fedoraproject.MediaWriter org.gnome.Loupe org.gnome.Maps org.gnome.Papers io.github.celluloid_player.Celluloid org.gnome.SimpleScan org.gnome.Snapshot org.gnome.TextEditor org.gnome.Weather com.mattjakeman.ExtensionManager
 ```
 
 ---
@@ -86,13 +86,49 @@ Abra o **Gerenciador de Extensões** e instale:
 - **GSConnect** (integração com Android/KDE Connect)  
 
 
+## **4. Toolbox para criar containers**
+
+No Fedora Silverblue, o [Toolbox](https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/) é uma a ferramenta nativa usada para criar e entrar em containers que servem como ambientes isolados para instalar e usar ferramentas, sem afetar o sistema base imutável. Dentro da Toolbox você pode usar o gerenciador de pacotes DNF para instalar pacotes. E se algo der errado, é fácil deletar o container e criar outro, mantendo o sistema base limpo e estável.
+
+O uso básico da Toolbox é o seguinte:
+
+1. Criar uma toolbox (container) com o sistema base do host (Fedora Silverblue):
+```
+toolbox create
+```
+Esse comando cria um container com a mesma versão do Fedora do sistema host.
+
+2. Criar uma toolbox com uma versão específica do Fedora:
+```
+toolbox create --release <versão>
+```
+Exemplo: `toolbox create --release f41` cria container com Fedora 41.
+
+3. Nomear um container para criar várias toolboxes:
+```
+toolbox create --container <nome> --release <versão>
+```
+Exemplo: `toolbox create --container fedora31 --release f31`
+
+4. Entrar em uma toolbox existente para usar o ambiente containerizado:
+```
+toolbox enter
+```
+Ou para um container específico:
+```
+toolbox enter <nome>
+```
+
+5. Listar containers criados:
+```
+toolbox list
+```
+
 ---
 
-## **4. Instalar o Distrobox no Silveblue**
+## **5. Instalar o Distrobox no Silveblue (opcional)**
 
-O Fedora Silverblue já vem com o [Toolbox](https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/) instalado por padrão para criar containers.  
-O [Distrobox.](https://github.com/89luca89/distrobox) tem recursos extras interessantes, como compatibilidade com várias Distros, a opção `-assemble create --file` de criar múltiplos containers de uma vez, e a opção de exportar atalhos para o menu do sistema hospedeiro.
-
+O [Distrobox](https://github.com/89luca89/distrobox) é bem similar ao Toolbox, mas tem recursos extras interessantes, como compatibilidade com várias Distros, a opção `-assemble create --file` de criar múltiplos containers de uma vez, e a opção de exportar atalhos para o menu do sistema hospedeiro.
 
 Instalar o Distrobox:
 
@@ -108,7 +144,7 @@ Reinicie o sistema para o Silverblue concluir a instalação.
 
  O **DistroShelf** é uma Interface gráfica para gerenciar containers do Distrobox, que facilita instalar, clonar, remover containers - além de adicionar atalhos no menu de aplicativos do Silverblue (host).
 
-<u>Observação:</u> o Distrobox não necessita de aplicações extras para criar containers. Veja a [documentação](https://github.com/89luca89/distrobox) oficial.
+<u>Observação:</u> o Distrobox pode gerenciar os containers pelo Terminal sem necessidade de aplicações gráficas. Veja a [documentação](https://github.com/89luca89/distrobox) oficial.
 
 
 ### Containers no Distrobox
@@ -125,7 +161,7 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
  ```
 
 
-## **5. Outras Configurações Úteis**
+## **6. Outras Configurações Úteis**
 
 ### **Desativar o `NetworkManager-wait-online.service`**
 
