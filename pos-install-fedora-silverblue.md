@@ -1,6 +1,7 @@
 # **Guia Básico Pós-Instalação do Fedora Silverblue** 
 
-Este guia cobre as configurações básicas após instalar o Fedora Silverblue.  
+Este guia cobre as configurações básicas após instalar o Fedora Silverblue. 
+As sessões **2**, **4** e **5** que lidam com Flatpak e Containers, também são suportadas pelo **Fedora Kinoite** e demais Desktops Atômicos do Fedora. 
 
 ![Captura de tela Fedora Silverblue](https://raw.githubusercontent.com/diogopessoa/my-packages-lists/main/silverblue/screenshot_silverblue_2025-07-31.png)
 
@@ -108,7 +109,7 @@ Exemplo: `toolbox create --release f41` cria container com Fedora 41.
 ```
 toolbox create --container <nome> --release <versão>
 ```
-Exemplo: `toolbox create --container fedora31 --release f31`
+Exemplo: `toolbox create --container fedora41 --release f41`
 
 4. Entrar em uma toolbox existente para usar o ambiente containerizado:
 ```
