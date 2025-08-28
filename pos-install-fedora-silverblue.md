@@ -12,9 +12,9 @@ As sessões **2**, **4** e **5** que lidam com Flatpak e Containers, também sã
 - ✅ **Toolbox:** ferramenta nativa para criar containers
 - ✅ **Distrobox:** instalação e criação de containers com funcionalidades adicionais
 - ✅ **Melhor integração com tema:** GTK + Flatpak  
-- ✅ **Extensões do GNOME:** Opções adicionais
-- ✅ **Rollback do Sistema** volta para uma versão anterior 
+- ✅ **Extensões do GNOME:** Opções adicionais 
 - ✅ **Comandos essenciais:** dicas de gerenciamento rpm-ostree
+- ✅ **Rollback do Sistema** volta para uma versão anterior
 
 ****
 
@@ -248,7 +248,7 @@ Assim, o Fedora Silverblue volta para a versão anterior do sistema de forma sim
 
 ### **💡 Dicas Importantes**
 
-1. Sempre **reiniciar** após `rpm-ostree upgrade` para aplicar atualizações.  
+1. Deixe o Silverblue cuidar das atualizações sem preocupação. No GNOME Software, habilite **Automático** em Atualizações de programas.  
 2. Prefira **Flatpaks** a overlays (`rpm-ostree install`) para manter o sistema imutável.  
 3. Use container com [Toolbox](https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/) ou [Distrobox](https://github.com/89luca89/distrobox) para instalar com `dnf install` ou pacotes RPM (além de outros formatos) que não tem em Flatpak.
 
