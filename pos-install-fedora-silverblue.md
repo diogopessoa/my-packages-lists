@@ -12,7 +12,8 @@ As sessões **2**, **4** e **5** que lidam com Flatpak e Containers, também sã
 - ✅ **Toolbox:** ferramenta nativa para criar containers
 - ✅ **Distrobox:** instalação e criação de containers com funcionalidades adicionais
 - ✅ **Melhor integração com tema:** GTK + Flatpak  
-- ✅ **Extensões do GNOME:** Opções adicionais 
+- ✅ **Extensões do GNOME:** Opções adicionais
+- ✅ **Rollback do Sistema** volta para uma versão anterior 
 - ✅ **Comandos essenciais:** dicas de gerenciamento rpm-ostree
 
 ****
@@ -213,9 +214,37 @@ Como o Fedora Silverblue foi projetado para ser um sistema 'inquebrável' e imut
 | `rpm-ostree cleanup -m`         | Limpa versões antigas do sistema                                |
 | `systemctl reboot`              | Reinicia o sistema (necessário após atualizações do rpm-ostree) |
 | `rpm-ostree cancel`             | Cancela uma transação pendente (ex: atualização travada)        |
-| `rpm-ostree rollback`           | Make the previous deployment the default boot entry             |
+| `rpm-ostree rollback`           | Faz **rollback** para uma versão anterior do sistema             |
 
 ---
+
+## Rollback do Sistema 
+
+No Fedora Silverblue (Kinoite e outros atômicos do Fedora), caso tenha algum problema de atualização do sistema (que é raro de acontecer), temos a opção de fazer **rollback** para uma versão anterior do sistema, de forma simples e segura.
+
+Para fazer Rollback de alguma atualização, siga os passos:
+
+1. Reboote o sistema e no menú de boot do Fedora Silverblue, selecione a versão anterior do sistema (deployment anterior) para iniciar.
+
+3. Quando o sistema concluir de inicializar, abra o terminal e digite:
+
+```bash
+sudo rpm-ostree rollback
+```
+
+Esse comando restaura o deployment anterior e aplica no próximo reboot.
+
+4. Reinicie o sistema para carregar a versão anterior:
+
+```bash
+sudo systemctl reboot
+```
+
+Assim, o Fedora Silverblue volta para a versão anterior do sistema de forma simples e segura.
+
+
+---
+
 
 ### **💡 Dicas Importantes**
 
