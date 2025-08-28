@@ -4,7 +4,7 @@ Este guia cobre as configurações básicas após instalar o Fedora Silverblue.
 As sessões **2**, **4** e **5** que lidam com Flatpak e Containers, também são suportadas pelo **Fedora Kinoite** e demais Desktops Atômicos do Fedora. 
 
 ![Captura de tela Fedora Silverblue](https://raw.githubusercontent.com/diogopessoa/my-packages-lists/main/silverblue/screenshot_silverblue_2025-07-31.png)
-
+                                     
 ## **O que você irá ter com este guia:**
 
 - ✅ **Repositórios adicionais** 
@@ -14,9 +14,9 @@ As sessões **2**, **4** e **5** que lidam com Flatpak e Containers, também sã
 - ✅ **Melhor integração com tema:** GTK + Flatpak  
 - ✅ **Extensões do GNOME:** Opções adicionais 
 - ✅ **Comandos essenciais:** dicas de gerenciamento rpm-ostree
-- ✅ **Rollback do Sistema** volta para uma versão anterior
+- ✅ **Rollback do Sistema:** volta para uma versão anterior
 
-****
+
 
 ## **Passo a Passo**
 
@@ -46,7 +46,7 @@ Habilita se necessário:
 2. Reiniciar para aplicar as mudanças.
 
 
----
+
 
 ## **2. Substituir Flatpaks Fedora por Flatpak do Flathub**
 
@@ -66,7 +66,7 @@ flatpak remote-modify --disable fedora  # (opcional, desativa sem remover)
 flatpak install flathub --assumeyes --noninteractive org.mozilla.firefox org.gnome.baobab org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.clocks org.gnome.Contacts org.gnome.Decibels org.gnome.font-viewer org.gnome.Logs org.gnome.Connections org.fedoraproject.MediaWriter org.gnome.Loupe org.gnome.Maps org.gnome.Papers io.github.celluloid_player.Celluloid org.gnome.SimpleScan org.gnome.Snapshot org.gnome.TextEditor org.gnome.Weather com.mattjakeman.ExtensionManager
 ```
 
----
+
 
 ### **Aplicativos Adicionais Recomendados**
 
@@ -126,7 +126,7 @@ toolbox enter <nome>
 toolbox list
 ```
 
----
+
 
 ## **5. Instalar o Distrobox no Silveblue (opcional)**
 
@@ -142,9 +142,8 @@ Reinicie o sistema para o Silverblue concluir a instalação.
 
 
 ### **Gerenciar Containers com DistroShelf**
----
 
- O **DistroShelf** é uma Interface gráfica para gerenciar containers do Distrobox, que facilita instalar, clonar, remover containers - além de adicionar atalhos no menu de aplicativos do Silverblue (host).
+O **DistroShelf** é uma Interface gráfica para gerenciar containers do Distrobox, que facilita instalar, clonar, remover containers - além de adicionar atalhos no menu de aplicativos do Silverblue (host).
 
 <u>Observação:</u> o Distrobox pode gerenciar os containers pelo Terminal sem necessidade de aplicações gráficas. Veja a [documentação](https://github.com/89luca89/distrobox) oficial.
 
@@ -197,10 +196,6 @@ gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
 ```
 
 
----
-
-
-
 ## Comandos essenciais para Silverblue
 
 Como o Fedora Silverblue foi projetado para ser um sistema 'inquebrável' e imutável (atômico), os comandos a seguir devem ser usados apenas para conhecimento ou em situações de última instância.
@@ -216,7 +211,7 @@ Como o Fedora Silverblue foi projetado para ser um sistema 'inquebrável' e imut
 | `rpm-ostree cancel`             | Cancela uma transação pendente (ex: atualização travada)        |
 | `rpm-ostree rollback`           | Reverte para uma versão anterior do sistema             |
 
----
+
 
 ## Rollback do Sistema 
 
@@ -224,17 +219,19 @@ No Fedora Silverblue (Kinoite e outros atômicos do Fedora), caso tenha algum pr
 
 Para fazer Rollback de alguma atualização, siga os passos:
 
-1. Reboote o sistema e no menu de boot do Fedora Silverblue, selecione a versão anterior do sistema (deployment anterior) para iniciar.
+1. Reinicie o sistema e no menu de boot do Fedora Silverblue, selecione a versão anterior do sistema que termina com `(ostree:1)`:
 
-3. Quando o sistema concluir de inicializar, abra o terminal e digite:
+![captura de tela - menu de boot silverblue](https://raw.githubusercontent.com/diogopessoa/my-packages-lists/main/silverblue/menu-boot-silverblue.png)
+
+2. Quando o sistema concluir de inicializar, abra o terminal e digite:
 
 ```bash
 sudo rpm-ostree rollback
 ```
 
-Esse comando restaura o deployment anterior e aplica no próximo reboot.
+Esse comando restaura o deployment anterior e aplica na próxima reinicialização.
 
-4. Reinicie o sistema para carregar a versão anterior:
+3. Reinicie o sistema para carregar a versão anterior:
 
 ```bash
 sudo systemctl reboot
@@ -242,9 +239,7 @@ sudo systemctl reboot
 
 Assim, o Fedora Silverblue volta para a versão anterior do sistema de forma simples e segura.
 
-
 ---
-
 
 ### **💡 Dicas Importantes**
 
