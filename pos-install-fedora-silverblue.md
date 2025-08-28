@@ -214,7 +214,7 @@ Como o Fedora Silverblue foi projetado para ser um sistema 'inquebrável' e imut
 | `rpm-ostree cleanup -m`         | Limpa versões antigas do sistema                                |
 | `systemctl reboot`              | Reinicia o sistema (necessário após atualizações do rpm-ostree) |
 | `rpm-ostree cancel`             | Cancela uma transação pendente (ex: atualização travada)        |
-| `rpm-ostree rollback`           | Faz **rollback** para uma versão anterior do sistema             |
+| `rpm-ostree rollback`           | Reverte para uma versão anterior do sistema             |
 
 ---
 
@@ -224,7 +224,7 @@ No Fedora Silverblue (Kinoite e outros atômicos do Fedora), caso tenha algum pr
 
 Para fazer Rollback de alguma atualização, siga os passos:
 
-1. Reboote o sistema e no menú de boot do Fedora Silverblue, selecione a versão anterior do sistema (deployment anterior) para iniciar.
+1. Reboote o sistema e no menu de boot do Fedora Silverblue, selecione a versão anterior do sistema (deployment anterior) para iniciar.
 
 3. Quando o sistema concluir de inicializar, abra o terminal e digite:
 
