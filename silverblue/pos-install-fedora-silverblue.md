@@ -62,8 +62,10 @@ flatpak remote-modify --disable fedora  # (opcional, desativa sem remover)
 
 ### **Instalar Aplicativos do Flathub (com base no GNOME Core)**  
 
+O Fedora instala os programas Flatpak por padrão com o parâmetro `--system`, deixando as aplicações disponíveis para todos os usuários. Para evitar o risco de instalar com o parâmetro `--user`, o que poderia causar a duplicação dos repositórios e runtimes, o comando a seguir usará o parâmetro padrão `--system`: 
+
 ```bash
-flatpak install flathub --assumeyes --noninteractive org.mozilla.firefox org.gnome.baobab org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.clocks org.gnome.Contacts org.gnome.Decibels org.gnome.font-viewer org.gnome.Logs org.gnome.Connections org.fedoraproject.MediaWriter org.gnome.Loupe org.gnome.Maps org.gnome.Papers io.github.celluloid_player.Celluloid org.gnome.SimpleScan org.gnome.Snapshot org.gnome.TextEditor org.gnome.Weather com.mattjakeman.ExtensionManager
+flatpak install --system flathub --assumeyes --noninteractive org.mozilla.firefox org.gnome.baobab org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.clocks org.gnome.Contacts org.gnome.Decibels org.gnome.font-viewer org.gnome.Logs org.gnome.Connections org.fedoraproject.MediaWriter org.gnome.Loupe org.gnome.Maps org.gnome.Papers io.github.celluloid_player.Celluloid org.gnome.SimpleScan org.gnome.Snapshot org.gnome.TextEditor org.gnome.Weather com.mattjakeman.ExtensionManager
 ```
 
 
@@ -75,7 +77,7 @@ flatpak install flathub --assumeyes --noninteractive org.mozilla.firefox org.gno
 - **DistroShelf**: interface gráfica para gerenciar containers do Distrobox
  
 ```bash
-flatpak install flathub --assumeyes --noninteractive page.tesk.Refine page.codeberg.libre_menu_editor.LibreMenuEditor com.ranfdev.DistroShelf
+flatpak install --system flathub --assumeyes --noninteractive page.tesk.Refine page.codeberg.libre_menu_editor.LibreMenuEditor com.ranfdev.DistroShelf
 ```
 
 
