@@ -11,10 +11,12 @@ As sessões **2**, **4** e **5** que lidam com Flatpak e Containers, também sã
 - ✅ **Substituição de Flatpak do Fedora pelo Flathub:** Codecs nativos
 - ✅ **Toolbox:** ferramenta nativa para criar containers
 - ✅ **Distrobox:** instalação e criação de containers com funcionalidades adicionais
+- ✅ **Rollback do Sistema:** volta para uma versão anterior
+- ✅ **Nvidia Driver:** link com instruções de instalação
 - ✅ **Melhor integração com tema:** GTK + Flatpak  
 - ✅ **Extensões do GNOME:** Opções adicionais 
 - ✅ **Comandos essenciais:** dicas de gerenciamento rpm-ostree
-- ✅ **Rollback do Sistema:** volta para uma versão anterior
+
 
 
 
@@ -44,8 +46,6 @@ Habilita se necessário:
 - RPM Fusion
 
 2. Reiniciar para aplicar as mudanças.
-
-
 
 
 ## **2. Substituir Flatpaks Fedora por Flatpak do Flathub**
@@ -145,7 +145,14 @@ Reinicie o sistema para o Silverblue concluir a instalação.
 
 O **DistroShelf** é uma Interface gráfica para gerenciar containers do Distrobox, que facilita instalar, clonar, remover containers - além de adicionar atalhos no menu de aplicativos do Silverblue (host).
 
-<u>Observação:</u> o Distrobox pode gerenciar os containers pelo Terminal sem necessidade de aplicações gráficas. Veja a [documentação](https://github.com/89luca89/distrobox) oficial.
+**Selecione o terminal no DistroShelf**
+
+O terminal padrão do Fedora Silverblue é o Ptyxis. Para o DistroShelf abrir automaticamente o terminal quando solicitado, faça:
+
+`DistroShelf > ... > Configurações > selecione: Ptyxis terminal`
+
+Observação:
+> o Distrobox pode gerenciar os containers pelo Terminal sem necessidade de aplicações gráficas. Veja a [documentação](https://github.com/89luca89/distrobox) oficial.
 
 
 ### Containers no Distrobox
@@ -161,8 +168,43 @@ No terminal do container, podemos adicionar os repositórios extras do Fedora e 
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
  ```
 
+## **6. Rollback do Sistema** 
 
-## **6. Outras Configurações Úteis**
+No Fedora Silverblue (Kinoite e outros atômicos do Fedora), caso tenha algum problema de atualização do sistema (que é raro de acontecer), temos a opção de fazer **rollback** para uma versão anterior do sistema, de forma simples e segura.
+
+Para fazer Rollback de alguma atualização, siga os passos:
+
+1. Reinicie o sistema e no menu de boot do Fedora Silverblue, selecione a versão anterior do sistema que termina com `(ostree:1)`:
+
+![captura de tela - menu de boot silverblue](https://raw.githubusercontent.com/diogopessoa/my-packages-lists/main/silverblue/menu-boot-silverblue.png)
+
+2. Quando o sistema concluir de inicializar, abra o terminal e digite:
+
+```bash
+sudo rpm-ostree rollback
+```
+
+Esse comando restaura o deployment anterior e aplica na próxima reinicialização.
+
+3. Reinicie o sistema para carregar a versão anterior:
+
+```bash
+sudo systemctl reboot
+```
+
+Assim, o Fedora Silverblue volta para a versão anterior do sistema de forma simples e segura.
+
+
+## **7. Nvidia Driver**
+
+O link a seguir é um guia atualizado para **instalar o driver NVIDIA** no Fedora Atômico (Silverblue, Kinoite e etc), substituindo os drivers Nouveau de código aberto. 
+
+[Installing NVIDIA Drivers on Fedora Atomic](https://github.com/Comprehensive-Wall28/Nvidia-Fedora-Guide?tab=readme-ov-file#installing-nvidia-drivers-on-fedora-atomic)
+
+Lembre-se: se algo der errado, você pode reverter as mudanças para uma versão anterior do sistema facilmente com um rollback, conforme explicado no tópico anterior.
+
+
+## **8. Outras Configurações Úteis**
 
 ### **Integrar tema GTK + Flatpak**
 
@@ -196,7 +238,7 @@ gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
 ```
 
 
-## Comandos essenciais para Silverblue
+## **9. Comandos essenciais para Silverblue**
 
 Como o Fedora Silverblue foi projetado para ser um sistema 'inquebrável' e imutável (atômico), os comandos a seguir devem ser usados apenas para conhecimento ou em situações de última instância.
 
@@ -212,34 +254,6 @@ Como o Fedora Silverblue foi projetado para ser um sistema 'inquebrável' e imut
 | `rpm-ostree rollback`           | Reverte para uma versão anterior do sistema             |
 
 
-
-## Rollback do Sistema 
-
-No Fedora Silverblue (Kinoite e outros atômicos do Fedora), caso tenha algum problema de atualização do sistema (que é raro de acontecer), temos a opção de fazer **rollback** para uma versão anterior do sistema, de forma simples e segura.
-
-Para fazer Rollback de alguma atualização, siga os passos:
-
-1. Reinicie o sistema e no menu de boot do Fedora Silverblue, selecione a versão anterior do sistema que termina com `(ostree:1)`:
-
-![captura de tela - menu de boot silverblue](https://raw.githubusercontent.com/diogopessoa/my-packages-lists/main/silverblue/menu-boot-silverblue.png)
-
-2. Quando o sistema concluir de inicializar, abra o terminal e digite:
-
-```bash
-sudo rpm-ostree rollback
-```
-
-Esse comando restaura o deployment anterior e aplica na próxima reinicialização.
-
-3. Reinicie o sistema para carregar a versão anterior:
-
-```bash
-sudo systemctl reboot
-```
-
-Assim, o Fedora Silverblue volta para a versão anterior do sistema de forma simples e segura.
-
----
 
 ### **💡 Dicas Importantes**
 
