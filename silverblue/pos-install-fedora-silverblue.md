@@ -90,9 +90,9 @@ Abra o **Gerenciador de Extensões** e instale:
 - **GSConnect** (integração com Android/KDE Connect)  
 
 
-## **4. Toolbox para criar containers**
+## **4. Toolbox para criar containers (Fedora, Debian, Ubuntu, Arch linux, openSUSE)**
 
-No Fedora Silverblue, o [Toolbox](https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/) é uma a ferramenta nativa usada para criar e entrar em containers que servem como ambientes isolados para instalar e usar ferramentas, sem afetar o sistema base imutável. Dentro da Toolbox você pode usar o gerenciador de pacotes DNF para instalar pacotes. E se algo der errado, é fácil deletar o container e criar outro, mantendo o sistema base limpo e estável.
+No Fedora Silverblue, o [Toolbox](https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/) é uma a ferramenta nativa usada para criar e entrar em containers que servem como ambientes isolados para instalar e usar ferramentas, sem afetar o sistema base imutável. Dentro da Toolbox você pode usar **diversas Distros Linux** (Fedora, Debian, Ubuntu, Arch linux, openSUSE e demais sistemas Linux) com seus respectivos gerenciadores de pacotes. E se algo der errado, é só deletar o container e criar outros, mantendo o sistema base limpo e estável.
 
 O uso básico da Toolbox é o seguinte:
 
@@ -132,7 +132,7 @@ toolbox list
 
 ## **5. Instalar o Distrobox no Silveblue (opcional)**
 
-O [Distrobox](https://github.com/89luca89/distrobox) é bem similar ao Toolbox, mas tem algumas funcionalidade extras, a opção `-assemble create --file` de criar múltiplos containers de uma vez, também a opção de exportar atalhos com facilidade para o menu do sistema hospedeiro.
+O [Distrobox](https://github.com/89luca89/distrobox) é bem similar ao Toolbox, mas tem algumas funcionalidades adicionais. Entre elas, destaca-se a opção `-assemble create --file`, permitindo criar múltiplos containers simultaneamente. Outra funcionalidade importante é a possibilidade de **inicializar serviços via systemd**, como por exemplo no comando `distrobox create --name ubuntu --init --image ubuntu:latest`, proporcionando melhor integração com o sistema hospedeiro. Além disso, o Distrobox facilita a exportação de atalhos para o menu de aplicativos do sistema.
 
 Instalar o Distrobox:
 
@@ -145,7 +145,7 @@ Reinicie o sistema para o Silverblue concluir a instalação.
 
 ### **Gerenciar Containers com DistroShelf**
 
-O **DistroShelf** é uma Interface gráfica para gerenciar containers do Distrobox, que facilita instalar, clonar, remover containers - além de adicionar atalhos no menu de aplicativos do Silverblue (host).
+O **DistroShelf** é uma Interface gráfica que facilita o gerenciamento de containers do Distrobox para instalar, clonar, remover, inicializar serviços com o Systemd, e ainda adicionar atalhos no menu de aplicativos do Silverblue (host).
 
 **Selecione o terminal no DistroShelf**
 
@@ -154,7 +154,7 @@ O terminal padrão do Fedora Silverblue é o Ptyxis. Para o DistroShelf abrir au
 `DistroShelf > ... > Configurações > selecione: Ptyxis terminal`
 
 Observação:
-> o Distrobox pode gerenciar os containers pelo Terminal sem necessidade de aplicações gráficas. Veja a [documentação](https://github.com/89luca89/distrobox) oficial.
+> o Distrobox pode gerenciar os containers pelo terminal sem necessidade de aplicações gráficas. Veja a [documentação](https://github.com/89luca89/distrobox) oficial.
 
 
 ### Containers no Distrobox
@@ -172,7 +172,7 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 
 ## **6. Rollback do Sistema** 
 
-No Fedora Silverblue (Kinoite e outros atômicos do Fedora), caso tenha algum problema de atualização do sistema (que é raro de acontecer), temos a opção de fazer **rollback** para uma versão anterior do sistema, de forma simples e segura.
+No Fedora Silverblue (Kinoite e outros atômicos do Fedora), caso queira reverter alguma atualização, temos a opção de fazer **rollback** para uma versão anterior do sistema, garantindo segurança e praticidade quando precisar.
 
 Para fazer Rollback de alguma atualização, siga os passos:
 
@@ -262,11 +262,13 @@ Como o Fedora Silverblue foi projetado para ser um sistema 'inquebrável' e imut
 1. Deixe o Silverblue cuidar das atualizações sem preocupação. No GNOME Software, habilite **Automático** em Atualizações de programas.  
 2. Prefira **Flatpaks** a overlays (`rpm-ostree install`) para manter o sistema imutável.  
 3. Use container com [Toolbox](https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/) ou [Distrobox](https://github.com/89luca89/distrobox) para instalar com `dnf install` ou pacotes RPM (além de outros formatos) que não tem em Flatpak.
+4. Se você quiser um sistema Linux "pronto para uso" para jogos, com drivers Nvidia e Distrobox já instalado, **[Bluefin](https://projectbluefin.io/)** e **[Aurora](https://getaurora.dev/en)** são ótimas opções. Ambos são baseados em Fedora Silverblue e oferecem fácil configuração para jogos via Steam e Flatpak (Flathub), com praticidade desde a instalação.
 
 ## Links úteis para Fedora Silverblue 
 
 - [Distrobox Auto-Upgrade Containers](https://github.com/diogopessoa/distrobox-container-auto-upgrade)
 - [Guia oficial Fedora Silverblue](https://docs.fedoraproject.org/pt_BR/fedora-silverblue/)
+- [Fedora Desktops Atômicos](https://fedoraproject.org/pt-br/atomic-desktops/)
 - [Telegram - Comunidade Fedora Brasil](t.me/comunidadefedorabrasil)
 - [YouTube - Toolbox no Fedora: Crie Ambientes Isolados para Suas Aplicações](https://www.youtube.com/watch?v=t-VuQoQp4gg)
 
