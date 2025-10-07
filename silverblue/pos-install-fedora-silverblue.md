@@ -84,7 +84,7 @@ org.gnome.Snapshot \
 org.gnome.TextEditor \
 org.gnome.Weather \
 org.mozilla.firefox \
-org.feichtmeier.Musicpod \
+com.github.neithern.g4music \
 io.github.celluloid_player.Celluloid \
 com.mattjakeman.ExtensionManager \
 page.tesk.Refine
