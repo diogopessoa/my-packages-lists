@@ -22,6 +22,22 @@ As sessões **2**, **4** e **5** que lidam com Flatpak e Containers, também sã
 
 ## **Passo a Passo**
 
+
+## Comando Automático para os passos '1' e '2' 
+
+O comando abaixo automaticamente adiciona o repositório Flathub e substitui os programas Flatpak do Fedora pelo Flathub. Copie e cole o comando no terminal:
+
+```bash
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && \
+flatpak uninstall --all --delete-data --assumeyes && \
+(flatpak remote-delete fedora --force || true) && \
+(flatpak remote-modify --disable fedora || true) && \
+flatpak install --system flathub --assumeyes org.gnome.baobab org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.clocks org.gnome.Contacts org.gnome.Connections org.gnome.font-viewer org.gnome.FileRoller org.gnome.Papers org.gnome.SimpleScan org.gnome.Snapshot org.gnome.TextEditor org.mozilla.firefox io.missioncenter.MissionCenter io.github.celluloid_player.Celluloid com.github.neithern.g4music com.mattjakeman.ExtensionManager page.tesk.Refine && \
+rpm-ostree install --allow-inactive openssl || true && \
+printf '\u2714\ufe0f Configuração concluída com sucesso no Fedora Silverblue!\n\U0001f501 Reinicie a máquina para aplicar as mudanças.\n'
+```
+
+
 ## **1. Repositórios adicionais**
 
 No meu caso o repositório RPM Fusion não é necessário, pois além da minha máquina ser "full AMD" (os drivers já estão no kernel Linux), a minha prioridade de uso de aplicações no Silverblue é de Flatpaks.
@@ -49,6 +65,7 @@ Habilita se necessário:
 
 
 ## **2. Substituir Flatpaks Fedora por Flatpak do Flathub**
+**(não precisa fazer este passo se já executou o Comando Automático acima)**
 
 O Fedora inclui seu próprio repositório Flatpak, mas os apps não tem todos os codecs necessários por questões de licenças. Remova os Flatpaks do Fedora e instale apenas do Flathub que já vem com todos os Codecs por padrão.
 
@@ -103,14 +120,18 @@ flatpak install --system flathub --assumeyes --noninteractive page.tesk.Refine p
 ```
 
 
-## **3. Extensões sugeridas**  
+## **3. Extensões do GNOME sugeridas**  
 
 Abra o **Gerenciador de Extensões** e instale:  
-- **Dash to Dock** (melhora o dock)  
+- **Dash to Dock** (dock similar ao macOS e elemetary OS)
+- **Dash to Panel** (barra de tarefas similar ao Windows, KDE Plasma)  
 - **Caffeine** (não deixa a máquina suspender)  
 - **Clipboard Indicator** (gerenciador de copiar-colar)  
 - **GSConnect** (integração com Android/KDE Connect)  
-
+  - GSConnect precisa do **openssl** para funcionar:
+  ```bash
+  rpm-ostree install --allow-inactive openssl
+  ```
 
 ## **4. Toolbox para criar containers (Fedora, Debian, Ubuntu, Arch linux, openSUSE)**
 
@@ -284,7 +305,7 @@ Como o Fedora Silverblue foi projetado para ser um sistema 'inquebrável' e imut
 1. Deixe o Silverblue cuidar das atualizações sem preocupação. No GNOME Software, habilite **Automático** em Atualizações de programas.  
 2. Prefira **Flatpaks** a overlays (`rpm-ostree install`) para manter o sistema imutável.  
 3. Use container com [Toolbox](https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/) ou [Distrobox](https://github.com/89luca89/distrobox) para instalar com `dnf install` ou pacotes RPM (além de outros formatos) que não tem em Flatpak.
-4. Se você quiser um sistema Linux "pronto para uso" para jogos, com drivers Nvidia e Distrobox já instalado, **[Bluefin](https://projectbluefin.io/)** e **[Aurora](https://getaurora.dev/en)** são ótimas opções. Ambos são baseados em Fedora Silverblue e oferecem fácil configuração para jogos via Steam e Flatpak (Flathub), com praticidade desde a instalação.
+4. Se você quiser um sistema Linux "pronto para uso" para jogos, com drivers Nvidia e Distrobox já instalado, o [Bazzite](https://bazzite.gg) é uma ótima opção. O sistema é baseado no Fedora Silverblue e oferece fácil acesso à jogos via Steam e Lutris, opção de drivers Nvidia com praticidade desde a instalação.
 
 ## Links úteis para Fedora Silverblue 
 
