@@ -32,7 +32,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 flatpak uninstall --all --delete-data --assumeyes && \
 (flatpak remote-delete fedora --force || true) && \
 (flatpak remote-modify --disable fedora || true) && \
-flatpak install --system flathub --assumeyes org.gnome.baobab org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.clocks org.gnome.Contacts org.gnome.Connections org.gnome.font-viewer org.gnome.FileRoller org.gnome.Papers org.gnome.SimpleScan org.gnome.Snapshot org.gnome.TextEditor org.mozilla.firefox io.missioncenter.MissionCenter org.gnome.Showtime com.github.neithern.g4music com.mattjakeman.ExtensionManager page.tesk.Refine && \
+flatpak install --system flathub --assumeyes org.gnome.baobab org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.clocks org.gnome.Contacts org.gnome.Connections org.gnome.font-viewer org.gnome.FileRoller org.gnome.Papers org.gnome.SimpleScan org.gnome.Snapshot org.gnome.TextEditor org.mozilla.firefox io.missioncenter.MissionCenter org.gnome.Showtime org.gnome.Loupe com.github.neithern.g4music com.mattjakeman.ExtensionManager page.codeberg.libre_menu_editor.LibreMenuEditor page.tesk.Refine page.tesk.Refine && \
 rpm-ostree install --allow-inactive openssl || true && \
 printf '\u2714\ufe0f Configuração concluída com sucesso no Fedora Silverblue!\n\U0001f501 Reinicie a máquina para aplicar as mudanças.\n'
 ```
