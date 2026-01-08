@@ -44,9 +44,11 @@ flatpak install --system flathub --assumeyes \
   io.missioncenter.MissionCenter \
   org.gnome.Showtime \
   com.github.neithern.g4music \
-  page.codeberg.libre_menu_editor.LibreMenuEditor page.tesk.Refine \
   com.mattjakeman.ExtensionManager \
-  page.tesk.Refine
+  page.codeberg.libre_menu_editor.LibreMenuEditor \
+  page.tesk.Refine \
+|| true
+
 
 rpm-ostree install --allow-inactive openssl || true
 
