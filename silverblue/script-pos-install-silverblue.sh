@@ -4,10 +4,11 @@ set -e
 ############################################
 # Pós-Instalação Fedora Silverblue 43
 ############################################
-### Executar o script no terminal:
-## 
-## chmod +x script-pos-install-silverblue.sh
-## ./pos-install-silverblue.sh
+## INSTALAÇÃO
+##
+## Execute o comando abaixo após uma instalação limpa:
+## curl -fsSL https://raw.githubusercontent.com/diogopessoa/my-packages-lists/main/silverblue/script-pos-install-silverblue.sh | bash
+##
 ############################################
 
 
