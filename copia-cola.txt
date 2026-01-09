@@ -1,5 +1,5 @@
 #########################
-# COPIA E COLA
+#      COPIA E COLA     #
 #########################
 
 ## Links
@@ -9,7 +9,7 @@
 - [TransferNow] https://www.transfernow.net/pt
 
 
-## No Telegram
+## Pasta Sync Telegram
 
 ### DashToDock
  
@@ -25,7 +25,7 @@ office_fontes
 
 
 ------------------------------------------------
-|    <<<<<<<<<<  Copia e Cola  >>>>>>>>>>>>>
+|     ↓↓↓↓↓↓↓↓↓↓↓↓  Copia e Cola  ↓↓↓↓↓↓↓↓↓↓↓↓     |
 ------------------------------------------------
 
 
