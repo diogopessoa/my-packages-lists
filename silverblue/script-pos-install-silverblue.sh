@@ -92,14 +92,6 @@ echo "Instalando RPM-OSTree Manager..."
 curl -fsSL https://raw.githubusercontent.com/diogopessoa/rpm-ostree-manager/main/install.sh | bash
 
 
-############################################
-# Finalização
-############################################
-
-echo ""
-echo "Pós-instalação concluída com sucesso!"
-echo "  - Reinicie o sistema para aplicar todas as mudanças"
-
 ###########################################
 # 6. Migração Fedora Flatpak para Flathub
 ###########################################
@@ -119,8 +111,7 @@ if [ -n "$apps_fedora" ]; then
     done
 fi
 
-# 3. Instala a sua lista de aplicativos (Estrutura preferida)
-# Usamos um loop simples para que, se um falhar, o próximo continue.
+# 3. Instala os apps essenciais do GNOME
 echo "Instalando aplicativos do Flathub..."
 lista_apps=(
   org.gnome.Baobab \
