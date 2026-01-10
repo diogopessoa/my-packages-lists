@@ -17,24 +17,14 @@ fi
 pkill -f gnome-software || true
 
 ############################################
-# 1. Redução do uso de Swap (Swappiness)
-############################################
-
-echo "Configurando swappiness para 10..."
-sudo tee /etc/sysctl.d/99-swappiness.conf <<EOF
-vm.swappiness=10
-vm.vfs_cache_pressure=50
-EOF
-
-############################################
-# 2. Desativar serviço desnecessário no boot
+# 1. Desativar serviço desnecessário no boot
 ############################################
 
 echo "Desativando NetworkManager-wait-online.service..."
 sudo systemctl disable NetworkManager-wait-online.service || true
 
 ############################################
-# 3. Instalação das fontes do Office
+# 2. Instalação das fontes do Office
 ############################################
 
 echo "Instalando fontes Office na pasta do usuário..."
@@ -55,7 +45,7 @@ rm -f "$TMP_ZIP"
 echo "Fontes Office instaladas com sucesso."
 
 ############################################
-# 4. Tema de Ícones Hatter
+# 3. Tema de Ícones Hatter
 ############################################
 
 echo "Instalando os Ícones Hatter..."
@@ -85,7 +75,7 @@ echo "Hatter instalado com sucesso."
 
 
 ############################################
-# 5. RPM-OSTree Manager
+# 4. RPM-OSTree Manager
 ############################################
 
 echo "Instalando RPM-OSTree Manager..."
@@ -93,7 +83,7 @@ curl -fsSL https://raw.githubusercontent.com/diogopessoa/rpm-ostree-manager/main
 
 
 ###########################################
-# 6. Migração Fedora Flatpak para Flathub
+# 5. Migração Fedora Flatpak para Flathub
 ###########################################
 
 echo "Configurando Flatpak: priorizando Flathub..."
