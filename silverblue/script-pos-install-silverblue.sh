@@ -101,13 +101,12 @@ if [ -n "$apps_fedora" ]; then
     done
 fi
 
-# 3. Instala os apps essenciais do GNOME
+# 3. Instala apps essenciais
 echo "Instalando aplicativos do Flathub..."
 lista_apps=(
   org.gnome.Baobab \
   org.gnome.Calculator \
   org.gnome.Calendar \
-  org.gnome.Characters \
   org.gnome.Clocks \
   org.gnome.Contacts \
   org.gnome.Connections \
@@ -118,6 +117,7 @@ lista_apps=(
   org.gnome.SimpleScan \
   org.gnome.Snapshot \
   org.gnome.TextEditor \
+  it.mijorus.smile \
   io.missioncenter.MissionCenter \
   org.gnome.Showtime \
   com.github.neithern.g4music \
