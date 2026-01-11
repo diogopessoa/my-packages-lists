@@ -118,11 +118,11 @@ lista_apps=(
   org.gnome.SimpleScan \
   org.gnome.Snapshot \
   org.gnome.TextEditor \
-  org.mozilla.firefox \
   io.missioncenter.MissionCenter \
   org.gnome.Showtime \
   com.github.neithern.g4music \
   com.mattjakeman.ExtensionManager \
+  com.brave.Browser \
   page.codeberg.libre_menu_editor.LibreMenuEditor \
   page.tesk.Refine    
 )
