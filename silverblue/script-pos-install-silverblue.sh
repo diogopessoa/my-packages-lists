@@ -130,13 +130,13 @@ fi
 
 # 4. Lista de apps essenciais
 lista_apps=(
-  org.gnome.Baobab
+  org.gnome.baobab
   org.gnome.Calculator
   org.gnome.Calendar
-  org.gnome.Clocks
+  org.gnome.clocks
   org.gnome.Contacts
   org.gnome.Connections
-  org.gnome.FontViewer
+  org.gnome.font-viewer
   org.gnome.FileRoller
   org.gnome.Loupe
   org.gnome.Papers
