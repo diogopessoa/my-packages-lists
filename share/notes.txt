@@ -1,0 +1,27 @@
+
+# NOTAS
+
+## Links
+
+- [GitHub] https://github.com/diogopessoa/my-packages-lists
+- [Paste] https://paste.centos.org/
+- [TransferNow] https://www.transfernow.net/pt
+
+
+## Pasta Sync Telegram
+
+### DashToDock
+ 
+Pesquisa:
+- dashToDock_config_adelmo
+- dashToDock_config_elitebook
+
+### Zorin Wallpaper
+zorin_wallpaper
+
+### office font
+office_fontes
+
+
+## NOTAS RÁPIDAS
+- 
