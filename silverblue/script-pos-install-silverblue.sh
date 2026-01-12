@@ -178,6 +178,10 @@ echo "--------------------------------"
 ############################################
 
 echo ""
-echo "###################################################"
+echo "######################################################"
 echo "Pós-instalação concluída com sucesso! :)"
-echo "Reinicie o sistema para aplicar todas as mudanças."
+echo " - Reinicie o sistema para aplicar todas as mudanças."
+echo ""
+echo "  Notas e Configurações compartilhadas:"
+echo "  github.com/diogopessoa/my-packages-lists/blob/main/share/notes.txt" 
+echo "--------------------------------------------------------------------"
