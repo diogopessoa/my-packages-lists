@@ -143,6 +143,7 @@ lista_apps=(
   org.gnome.SimpleScan
   org.gnome.Snapshot
   org.gnome.TextEditor
+  org.onlyoffice.desktopeditors
   it.mijorus.smile
   io.missioncenter.MissionCenter
   org.gnome.Showtime
