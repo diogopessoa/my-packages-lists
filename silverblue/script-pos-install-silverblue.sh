@@ -1,3 +1,8 @@
+Script para uso pessoal de pós instalação e configuração Fedora Silverblue para uso doméstico.
+Executar como usuário normal no terminal: 'chmod +x pos-install-silverblue.sh' e depois './pos-install-silverblue.sh'.
+Leia principalmente a opção "# 1. Desativar 'wait-online' no boot", e comente '#' se não quiser executar este bloco no script.
+ 
+
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -17,8 +22,21 @@ fi
 pkill -f gnome-software || true
 
 ############################################
-# 1. Desativar serviço desnecessário no boot
+# 1. Desativar 'wait-online' no boot
 ############################################
+
+# >> Por que desativar:
+# - Boot mais rápido
+# - A rede continua funcionando normalmente
+# - Serviços não aguardam conectividade total antes de iniciar
+
+# >> Quando não desativar:
+# Existir serviços que se conectam à redes externas antes do login do usuário. 
+#
+# Exemplos:
+# - Montagens de rede externas em /etc/fstab (NFS, CIFS, iSCSI)
+# - Servidores remotos para iniciar
+# - VPNs que precisam subir automaticamente no boot
 
 echo ""
 echo "-------------------------------------------------"
