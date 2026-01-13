@@ -10,7 +10,8 @@
   
 - [Guia Básico Pós-Instalação do Fedora Silverblue](https://github.com/diogopessoa/my-packages-lists/blob/main/silverblue/pos-install-fedora-silverblue.md)
 
-- [Distrobox Container Auto-Upgrade](https://github.com/diogopessoa/distrobox-container-auto-upgrade)
+- [📦️ Distrobox Container Auto-Upgrade](https://github.com/diogopessoa/distrobox-container-auto-upgrade)
+- [🍺 Homebrew auto-update](https://github.com/diogopessoa/brew-update/tree/main)
 
 ## Bazzite
 - [Script Bazzite Lite](https://github.com/diogopessoa/bazzite-lite)
