@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Verifica se está rodando como root (não recomendado para este script)
+# Verifica se está rodando como root (root não recomendado)
 if [[ $EUID -eq 0 ]]; then
   echo "ERRO: Não execute este script com sudo ou como root!"
   echo "      Rode como usuário normal: ./pos-install-silverblue.sh"
@@ -13,7 +13,7 @@ fi
 # Pós-Instalação Fedora Silverblue
 ############################################
 
-# Encerrando gnome-software para evitar conflitos
+# Encerra o gnome-software para evitar conflitos
 pkill -f gnome-software || true
 
 ############################################
@@ -50,7 +50,7 @@ rm -f "$TMP_ZIP"
 
 echo ""
 echo "-------------------------------------"
-echo "Fontes Office instaladas com sucesso!"
+echo ">>>> Fontes Office instaladas com sucesso!"
 echo "-------------------------------------"
 
 ############################################
@@ -84,9 +84,9 @@ flatpak override --user --filesystem=xdg-config/gtk-4.0
 
 rm -rf "$HATTER_DIR"
 echo ""
-echo "-----------------------------"
-echo "Hatter instalado com sucesso!"
-echo "-----------------------------"
+echo "----------------------------------"
+echo ">>>> Hatter instalado com sucesso!"
+echo "----------------------------------"
 
 
 ############################################
@@ -106,7 +106,7 @@ curl -fsSL https://raw.githubusercontent.com/diogopessoa/rpm-ostree-manager/main
 
 echo ""
 echo "--------------------------------------------------"
-echo "Configurando Flatpak: migrando Fedora → Flathub..."
+echo "Migra Fatpak Fedora → Flathub..."
 echo "--------------------------------------------------"
 
 # 1. Garante Flathub system-wide
@@ -161,7 +161,7 @@ for app in "${lista_apps[@]}"; do
     || echo "Aviso: $app não disponível no Flathub."
 done
 
-# 6. Remove remotes Fedora (opcional, após migração)
+# 6. Remove remotes Fedora
 flatpak remote-delete fedora --force 2>/dev/null || true
 flatpak remote-delete fedora-testing --force 2>/dev/null || true
 
@@ -169,9 +169,9 @@ flatpak remote-delete fedora-testing --force 2>/dev/null || true
 flatpak uninstall --unused --assumeyes
 
 echo ""
-echo "--------------------------------"
-echo "Migração para Flathub concluída!"
-echo "--------------------------------"
+echo "-------------------------------------"
+echo ">>>> Migração para Flathub concluída!"
+echo "-------------------------------------"
 
 
 ############################################
