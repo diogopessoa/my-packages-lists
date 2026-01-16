@@ -1,5 +1,5 @@
 
-# Minha lista de aplicativos
+# Minha lista de aplicativos do Fedora
 
 | ID application                                  | Nome                               |
 |-------------------------------------------------|------------------------------------|
@@ -65,10 +65,8 @@ sudo dnf install adw-gtk3-theme
 - Aplicar o tema
 ```bash
 gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
-```
 
 - Concluir a configuração
-```bash
 flatpak update
 ```
 
@@ -79,16 +77,14 @@ https://github.com/Mibea/Hatter?tab=readme-ov-file
 
 ```bash
 git clone https://github.com/Mibea/Hatter.git
-```
 
-```bash
 ./install.sh
 ```
 
 
-## RPM
+## Pacotes RPM
 ```bash
-sudo dnf install snapper btrfs-assistant fish
+sudo dnf install snapper btrfs-assistant fish distrobox adw-gtk3-theme
 ```
 
 ## Configurações e Ajustes
@@ -117,11 +113,14 @@ Após instalar o SyncThingy (Flatpak):
 - Clipboard indicator @tudomatu.com
 - Compact top bar @metehan
 - Dash to dock
-- Gsconnect 
+- Gsconnect
+- Lock Keys @lockkeys
+- Notification Timeout
+- ScreenToSpace
 - Quick setting audio panel
 - Vitals @corecoding
 - Window title is back@fthx
 
-## Salvar e Restaurar as configurações
+## Salvar e Restaurar as configurações Flatpak
 O aplicativo "Save Desktop" permite salvar a configuração atual (temas, ícones, papéis de parede, extensões, etc.) com um único clique para restaurar em outra máquina.
 
