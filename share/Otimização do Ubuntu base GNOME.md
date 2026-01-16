@@ -93,9 +93,15 @@ O Zorin OS utiliza uma interface pesada, então otimizar os recursos visuais é 
 
 ## 4. Otimização da memória virtual
 
-Ajustar o `vm.swappiness` é **crucial** para o desempenho em máquinas com menos de 8GB de RAM.
+Ajustar o `vm.swappiness` é **crucial** para o desempenho em máquinas com menos de 8GB de RAM, apenas de o armazenamento for HDD. Caso seja SSD, a swappiness=60 padrão é a melhor configuração.
 
-O valor padrão é 60. Queremos que o Linux use a área de Swap (Zram) **apenas como último recurso** para manter os dados no RAM (que é muito mais rápido).
+
+
+**Verifique o valor atual:**
+
+```bash
+   cat /proc/sys/vm/swappiness
+```
 
 1. **Defina Swappiness para 10:**
     
