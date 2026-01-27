@@ -1,98 +1,96 @@
 
-# Minha lista de aplicativos do Fedora
+# Minha Lista de Aplicativos do Fedora
+
+## Flatpak
 
 | ID application                                  | Nome                               |
 |-------------------------------------------------|------------------------------------|
-| app.devsuite.Ptyxis                             | Ptyxis                             |
-| be.alexandervanhee.gradia                       | Gradia                             |
-| com.bitwarden.desktop                           | Bitwarden                          |
-| com.calibre_ebook.calibre                       | calibre                            |
-| com.github.jeromerobert.pdfarranger             | PDF Arranger                       |
-| com.github.neithern.g4music                     | Gapless                            | 
-| com.github.PintaProject.Pinta                   | Pinta                              |
-| com.mattjakeman.ExtensionManager                | Gerenciador de Extensões           |
-| com.protonvpn.www                               | Proton VPN                         |
-| com.vivaldi.Vivaldi                             | Vivaldi                            |
-| com.warlordsoftwares.youtube-downloader-4ktube  | 4KTUBE                             |
-| de.haeckerfelix.Fragments                       | Fragments                          |
-| garden.jamie.Morphosis                          | Morphosis                          |
-| io.ente.auth                                    | Ente Auth                          |
-| io.github.celluloid_player.Celluloid            | Reprodutor de Multimídia Celluloid |
-| io.github.dvlv.boxbuddyrs                       | BoxBuddy                           |  
-| md.obsidian.Obsidian                            | Obisidian                          |
-| org.freefilesync.FreeFileSync                   | FreeFileSync                       |
-| org.gnome.baobab                                | Analisador de uso de disco         |
-| org.gnome.Calculator                            | Calculadora                        |
-| org.gnome.Calendar                              | Calendário                         |
-| org.gnome.Characters                            | Caracteres                         |
-| org.gnome.clocks                                | Relógios                           |
-| org.gnome.Connections                           | Conexões                           |
-| org.gnome.Papers                                | Visualizador de documentos         |
-| org.gnome.font-viewer                           | Fontes                             |
-| org.gnome.gitlab.YaLTeR.VideoTrimmer            | Video Trimmer                      |
-| org.gnome.gThumb                                | Visualizador de imagens gThumb     |
-| org.gnome.Logs                                  | Logs                               |
-| org.gnome.Loupe                                 | Visualizador de imagens            |
-| org.gnome.SimpleScan                            | Digitalizador de documentos        |
-| org.gnome.Snapshot                              | Câmera                             |
-| org.gnome.Solanum                               | Solanum                            |
-| org.gnome.SoundRecorder                         | Gravador de som                    |
-| org.gnome.TextEditor                            | Editor de Texto                    |
-| org.onlyoffice.desktopeditors                   | ONLYOFFICE Desktop Editors         |
-| org.telegram.desktop                            | Telegram                           |
-| org.upscayl.Upscayl                             | Upscayl                            |
-| io.github.flattool.Ignition                     | Ignition                           |   
-| page.codeberg.libre_menu_editor.LibreMenuEditor | Menu Principal                     |
-| me.timschneeberger.jdsp4linux 		                | JamesDSP                           |
-| run page.tesk.Refine                            | Tweak of GNOME
-| org.virt_manager.virt-manager                   | Virt-Manager                       |
-| com.github.zocker_160.SyncThingy                | Syncthing + simple tray indicator  |  
+| adw-gtk3 theme |             org.gtk.Gtk3theme.adw-gtk3  |             
+| adw-gtk3 theme Dark  |            org.gtk.Gtk3theme.adw-gtk3-dark  |        
+| Analisador de discos |            org.gnome.baobab |                                     
+| Bitwarden  |                     com.bitwarden.desktop  |                  
+| Brave |                          com.brave.Browser  |                      
+| Caixas |                         org.gnome.Boxes |                         
+| Calculadora  |                   org.gnome.Calculator |                    
+| Calendário |                     org.gnome.Calendar  |                     
+| Câmera |                         org.gnome.Snapshot  |                     
+| Collector |                      it.mijorus.collector |                   
+| Constrict |                      io.github.wartybix.Constrict |            
+| Conta-Gotas |                    com.github.finefindus.eyedropper  |       
+| Contactos  |                     org.gnome.Contacts |                      
+| CPU-X |                          …b.thetumultuousunicornofdarkness.cpu-x  |
+| Digitalizador de documentos |    org.gnome.SimpleScan |                    
+| DistroShelf |                    com.ranfdev.DistroShelf  |                
+| Easy Effects  |                  com.github.wwmm.easyeffects |            
+| Editor de texto |                org.gnome.TextEditor  |                   
+| FFaudioConverter |               com.github.Bleuzen.FFaudioConverter  |    
+| Flatseal  |                      com.github.tchx84.Flatseal  |             
+| Fontes |                         org.gnome.font-viewer |                   
+| Fragments  |                     de.haeckerfelix.Fragments |              
+| FreeFileSync  |                  org.freefilesync.FreeFileSync |           
+| Gapless |                        com.github.neithern.g4music  |            
+| Gestor de Arquivos |             org.gnome.FileRoller |                    
+| Gestor de Extensões |            com.mattjakeman.ExtensionManager  |       
+| HandBrake |                      fr.handbrake.ghb  |                       
+| Shotwell  |                      org.gnome.Shotwell.HEIC |                                         
+| Ignition |                       io.github.flattool.Ignition |             
+| Intel VAAPI driver |             org.freedesktop.Platform.VAAPI.Intel  |                            
+| LocalSend  |                     org.localsend.localsend_app |             
+| Menu Principal  |                …berg.libre_menu_editor.LibreMenuEditor  |
+| Mission Center |                 io.missioncenter.MissionCenter  |         
+| musicpod |                       org.feichtmeier.Musicpod  |               
+| OBS Studio |                     com.obsproject.Studio  |                  
+| Obsidian |                       md.obsidian.Obsidian  |                   
+| ONLYOFFICE Desktop Editors |     org.onlyoffice.desktopeditors |           
+| PDF Arranger |                   com.github.jeromerobert.pdfarranger |    
+| Pika Backup  |                   org.gnome.World.PikaBackup  |             
+| Proton VPN |                     com.protonvpn.www  |                      
+| ProtonUp-Q |                    net.davidotek.pupgui2  |                  
+| Refine |                         page.tesk.Refine |                        
+| Registos |                       org.gnome.Logs  |                        
+| Relógios |                       org.gnome.clocks |                       
+| Reprodutor de vídeo |            org.gnome.Showtime |                      
+| RustDesk  |                      com.rustdesk.RustDesk  |                  
+| Shotwell  |                      org.gnome.Shotwell |                      
+| Smile |                          it.mijorus.smile |                        
+| Steam |                          com.valvesoftware.Steam |                
+| SyncThingy  |                    com.github.zocker_160.SyncThingy  |       
+| Telegram  |                      org.telegram.desktop |                    
+| Teleprompter |                   io.github.nokse22.teleprompter |         
+| Video Trimmer |                  org.gnome.gitlab.YaLTeR.VideoTrimmer |                        
+| Visualizador de documentos |     org.gnome.Papers  |                       
+| Visualizador de imagens |         org.gnome.Loupe  |                        
+| Warehouse |                       io.github.flattool.Warehouse   |          
+| Zen |                            app.zen_browser.zen |     
      
 
-## 1. Instalar todos os flatpak de uma vez:
+## Pós Instalação Fedora
 
-```bash
-flatpak install flathub --assumeyes --noninteractive app.devsuite.Ptyxis be.alexandervanhee.gradia com.bitwarden.desktop com.calibre_ebook.calibre com.github.jeromerobert.pdfarranger com.github.neithern.g4music com.github.PintaProject.Pinta com.mattjakeman.ExtensionManager com.protonvpn.www com.vivaldi.Vivaldi com.warlordsoftwares.youtube-downloader-4ktube de.haeckerfelix.Fragments garden.jamie.Morphosis io.ente.auth io.github.celluloid_player.Celluloid io.github.dvlv.boxbuddyrs md.obsidian.Obsidian org.freefilesync.FreeFileSync org.gnome.baobab org.gnome.Calculator org.gnome.Calendar org.gnome.Characters org.gnome.clocks org.gnome.Connections org.gnome.Papers org.gnome.font-viewer org.gnome.gitlab.YaLTeR.VideoTrimmer org.gnome.gThumb org.gnome.Logs org.gnome.Loupe org.gnome.SimpleScan org.gnome.Snapshot org.gnome.Solanum org.gnome.SoundRecorder org.gnome.TextEditor org.onlyoffice.desktopeditors org.telegram.desktop org.upscayl.Upscayl page.codeberg.libre_menu_editor.LibreMenuEditor me.timschneeberger.jdsp4linux run page.tesk.Refine org.virt_manager.virt-manager com.github.zocker_160.SyncThingy
-```
+### Script para Workstation 
+- [Script Pós-Instalação Fedora Silverblue](https://gist.github.com/diogopessoa/d66ec201068ac799da7a25f996be5cfe#file-pos-install-silverblue-sh)
 
-## 2. Ajuste de Tema GTK para aplicações Flatpak
+### Script para Silverblue
+- [Script Pós-install Fedora Workstation](https://github.com/diogopessoa/fedora-flatpak-setup)
+  
 
-- Instalar o tema
-```bash
-sudo dnf install adw-gtk3-theme
-```
+### Pacotes RPM
 
-- Aplicar o tema
-```bash
-gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
-
-- Concluir a configuração
-flatpak update
-```
-
-### Tema de ícones GTK
-
-- Hatter
-https://github.com/Mibea/Hatter?tab=readme-ov-file 
-
-```bash
-git clone https://github.com/Mibea/Hatter.git
-
-./install.sh
-```
-
-
-## Pacotes RPM
+**Workstation**
 ```bash
 sudo dnf install snapper btrfs-assistant fish distrobox adw-gtk3-theme
 ```
 
+**Silverblue**
+```bash
+rpm-ostree install fish distrobox adw-gtk3-theme
+```
+
 ## Configurações e Ajustes
 
-### Btrfs Assistant (X11)
+### Btrfs Assistant (Workstation)
 - pkexec btrfs-assistant (execução no atalho do menu)
 
-### SyncThing (https://github.com/zocker-160/SyncThingy)
+### SyncThing 
 Após instalar o SyncThingy (Flatpak):
 - instale a extensão 'AppIndicator and KStatusNotifierItem';
 - Configuração:
@@ -108,7 +106,7 @@ Após instalar o SyncThingy (Flatpak):
  - agora pode remover a extensão 'AppIndicator'
 
 
-### GNOME Shell Extensions
+## GNOME Shell Extensions
 - Caffeine
 - Clipboard indicator @tudomatu.com
 - Compact top bar @metehan
@@ -120,6 +118,10 @@ Após instalar o SyncThingy (Flatpak):
 - Quick setting audio panel
 - Vitals @corecoding
 - Window title is back@fthx
+
+## Pasta "share" para compartilhamentos
+- [share](https://github.com/diogopessoa/my-packages-lists/tree/main/share)
+- [notes](https://github.com/diogopessoa/my-packages-lists/blob/main/share/notes.txt)
 
 ## Salvar e Restaurar as configurações Flatpak
 O aplicativo "Save Desktop" permite salvar a configuração atual (temas, ícones, papéis de parede, extensões, etc.) com um único clique para restaurar em outra máquina.
