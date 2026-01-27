@@ -3,7 +3,7 @@
 ## Fedora Workstation
 - [Minha lista de aplicativos](https://github.com/diogopessoa/my-packages-lists/blob/main/fedora-packages-list.md)
 
-- [Fedora Flatpak Setup](https://github.com/diogopessoa/fedora-flatpak-setup)
+- [Script Pós-install Fedora Workstation](https://github.com/diogopessoa/fedora-flatpak-setup)
 
 ## Fedora Silverblue
 - [Script Pós-Instalação Fedora Silverblue ](https://gist.github.com/diogopessoa/d66ec201068ac799da7a25f996be5cfe)
