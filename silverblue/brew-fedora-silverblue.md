@@ -1,4 +1,4 @@
-# Guia Homebrew no Fedora Silverblue
+# Homebrew - Guia de Instalação no Fedora Silverblue
 
 ## 1) Pré-requisitos
 
