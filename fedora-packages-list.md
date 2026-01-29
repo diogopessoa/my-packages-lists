@@ -1,5 +1,5 @@
 
-# Minha Lista de Aplicativos do Fedora
+# Lista de Aplicativos do Fedora
 
 ## Flatpak
 
@@ -105,7 +105,6 @@ Após instalar o SyncThingy (Flatpak):
  - no navegador de internet, crie um atalho para o menu de aplicativos.
  - agora pode remover a extensão 'AppIndicator'
 
-
 ## GNOME Shell Extensions
 - Caffeine
 - Clipboard indicator @tudomatu.com
@@ -118,6 +117,34 @@ Após instalar o SyncThingy (Flatpak):
 - Quick setting audio panel
 - Vitals @corecoding
 - Window title is back@fthx
+
+## Extensões de Navegador
+- Dark Reader
+- RainDrop.io
+- Mate Translate
+- Adguard (o Brave não precisa)
+- Seek Subtitles for YouTube
+
+## Brave Browser Ajustes 
+
+Menu, Configurações...
+
+=> Desative:
+- Brave Rewards/recompensas;
+- ​Brave News/notícias;
+- Brave Wallet/caritera;
+- Notificações;
+- Mostrar número ícone do escudo;
+
+=> Filtros de conteúdo:
+- Fanboys Annoyances + uBO
+- Bypass Paywalls Clean 
+
+=> Ative:
+- Widevine
+- Indexar outros mecanismos de pesquisa
+- Economia de memória
+
 
 ## Pasta "share" para compartilhamentos
 - [share](https://github.com/diogopessoa/my-packages-lists/tree/main/share)
