@@ -108,9 +108,9 @@ brew bundle --file=~/Brewfile
 brew update && brew upgrade && brew cleanup
 ```
 
-### Atualização automática com script pessoal
+### Atualização automática dos pacotes Homebrew
 
-https://github.com/diogopessoa/brew-update/main/README.md 
+[🍺 Homebrew - Script Auto-Update](https://github.com/diogopessoa/brew-update) 
 
 ## Links Úteis
 - https://docs.projectbluefin.io/blog/easier-homebrew-installation-for-custom-images/
