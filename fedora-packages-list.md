@@ -1,7 +1,7 @@
 
-# Lista de Aplicativos do Fedora
+# Lista de Programas e Ajustes que uso no Fedora
 
-## Flatpak
+## Lista de programas Flatpak que tenho instalado
 
 | ID application                                  | Nome                               |
 |-------------------------------------------------|------------------------------------|
@@ -18,7 +18,7 @@
 | Constrict |                      io.github.wartybix.Constrict |            
 | Conta-Gotas |                    com.github.finefindus.eyedropper  |       
 | Contactos  |                     org.gnome.Contacts |                      
-| CPU-X |                          …b.thetumultuousunicornofdarkness.cpu-x  |
+| CPU-X |                          io.github.thetumultuousunicornofdarkness.cpu-x  |
 | Digitalizador de documentos |    org.gnome.SimpleScan |                    
 | DistroShelf |                    com.ranfdev.DistroShelf  |                
 | Easy Effects  |                  com.github.wwmm.easyeffects |            
@@ -36,7 +36,7 @@
 | Ignition |                       io.github.flattool.Ignition |             
 | Intel VAAPI driver |             org.freedesktop.Platform.VAAPI.Intel  |                            
 | LocalSend  |                     org.localsend.localsend_app |             
-| Menu Principal  |                …berg.libre_menu_editor.LibreMenuEditor  |
+| Menu Principal  |                page.codeberg.libre_menu_editor.LibreMenuEditor  |
 | Mission Center |                 io.missioncenter.MissionCenter  |         
 | musicpod |                       org.feichtmeier.Musicpod  |               
 | OBS Studio |                     com.obsproject.Studio  |                  
@@ -63,6 +63,11 @@
 | Warehouse |                       io.github.flattool.Warehouse   |          
 | Zen |                            app.zen_browser.zen |     
      
+### Instalar a Lista de Flatpak de uma vez
+
+```bash 
+flatpak install --system --assumeyes flathub org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark org.gnome.baobab com.bitwarden.desktop com.brave.Browser org.gnome.Boxes org.gnome.Calculator org.gnome.Calendar org.gnome.Snapshot it.mijorus.collector io.github.wartybix.Constrict com.github.finefindus.eyedropper org.gnome.Contacts io.github.thetumultuousunicornofdarkness.cpu-x org.gnome.SimpleScan com.ranfdev.DistroShelf com.github.wwmm.easyeffects org.gnome.TextEditor com.github.Bleuzen.FFaudioConverter com.github.tchx84.Flatseal org.gnome.font-viewer de.haeckerfelix.Fragments org.freefilesync.FreeFileSync com.github.neithern.g4music org.gnome.FileRoller com.mattjakeman.ExtensionManager fr.handbrake.ghb org.gnome.Shotwell.HEIC io.github.flattool.Ignition org.freedesktop.Platform.VAAPI.Intel org.localsend.localsend_app page.codeberg.libre_menu_editor.LibreMenuEditor io.missioncenter.MissionCenter org.feichtmeier.Musicpod com.obsproject.Studio md.obsidian.Obsidian org.onlyoffice.desktopeditors com.github.jeromerobert.pdfarranger org.gnome.World.PikaBackup com.protonvpn.www net.davidotek.pupgui2 page.tesk.Refine org.gnome.Logs org.gnome.clocks org.gnome.Showtime com.rustdesk.RustDesk org.gnome.Shotwell it.mijorus.smile com.valvesoftware.Steam com.github.zocker_160.SyncThingy org.telegram.desktop io.github.nokse22.teleprompter org.gnome.gitlab.YaLTeR.VideoTrimmer org.gnome.Papers org.gnome.Loupe io.github.flattool.Warehouse app.zen_browser.zen
+```
 
 ## Pós Instalação Fedora
 
@@ -125,25 +130,46 @@ Após instalar o SyncThingy (Flatpak):
 - Adguard (o Brave não precisa)
 - Seek Subtitles for YouTube
 
-## Brave Browser Ajustes 
+## Brave Ajustes 
 
 Menu, Configurações...
 
-=> Desative:
+**=> Desative:**
 - Brave Rewards/recompensas;
 - ​Brave News/notícias;
 - Brave Wallet/caritera;
 - Notificações;
 - Mostrar número ícone do escudo;
 
-=> Filtros de conteúdo:
+**=> Filtros de conteúdo:**
 - Fanboys Annoyances + uBO
 - Bypass Paywalls Clean 
 
-=> Ative:
+**=> Ative:**
 - Widevine
 - Indexar outros mecanismos de pesquisa
 - Economia de memória
+
+## Atalhos de Teclado Personalizados
+#### Atalhos de programas
+- Terminal Ptyxis: comando `ptyxis`, atalho `Super+T`
+- Smile emojis: comando `/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=smile it.mijorus.smile`, atalho `Super+;` 
+- Collector: comando `/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=collector it.mijorus.collector`, atalho `Super+C`
+
+#### Atalhos Som e Mídia
+- Aumentar volume: `Alt+Seta_Acima`
+- Diminuir volume: `Alt+Seta_Abaixo`
+- Faixa anterior: `Alt+<`
+- Próxima faixa: `Alt+>`
+- Reproduzir ou Pausar: `Alt+P`
+
+#### Janelas
+- Fechar a janela: `Alt+X`
+
+#### Navegação
+- Mover a janela do espaço de trabalho à direita: `Alt+Super+Page Down`
+- Mover a janela do espaço de trabalho à esquerda: `Alt+Super+Page Up`
+- 
 
 
 ## Pasta "share" para compartilhamentos
@@ -151,5 +177,20 @@ Menu, Configurações...
 - [notes](https://github.com/diogopessoa/my-packages-lists/blob/main/share/notes.txt)
 
 ## Salvar e Restaurar as configurações Flatpak
-O aplicativo "Save Desktop" permite salvar a configuração atual (temas, ícones, papéis de parede, extensões, etc.) com um único clique para restaurar em outra máquina.
+O programa [Save Desktop](https://flathub.org/en/apps/io.github.vikdevelop.SaveDesktop) permite salvar a configuração atual (temas, ícones, papéis de parede, extensões, etc.) com um único clique para restaurar em outra máquina.
 
+## Minha lista de Script e Guia de Instalação
+
+#### Fedora Workstation
+- [📋️ Lista de Aplicativos](https://github.com/diogopessoa/my-packages-lists/blob/main/fedora-packages-list.md)
+- [⬇️ Script Pós-install Fedora Workstation](https://github.com/diogopessoa/fedora-flatpak-setup)
+
+#### Fedora Silverblue
+- [⬇️ Script Pós-Instalação do Fedora Silverblue ](https://gist.github.com/diogopessoa/d66ec201068ac799da7a25f996be5cfe)
+- [⬇️ Guia Pós-Instalação do Fedora Silverblue](https://github.com/diogopessoa/my-packages-lists/blob/main/silverblue/pos-install-fedora-silverblue.md)
+- [📦️ Distrobox Container Auto-Upgrade](https://github.com/diogopessoa/distrobox-container-auto-upgrade)
+- [🍺 Homebrew - Instalação no Fedora Silverblue](https://github.com/diogopessoa/my-packages-lists/blob/main/silverblue/brew-fedora-silverblue.md)
+- [🍺 Homebrew - Script Auto-Update](https://github.com/diogopessoa/brew-update)
+
+#### Bazzite
+- [⚙️ Script Bazzite Lite](https://github.com/diogopessoa/bazzite-lite)
