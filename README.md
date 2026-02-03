@@ -1,7 +1,9 @@
 # my-packages-lists
 
+## Lista de Programas 
+- [📋️ Lista de Programas e Ajustes que uso no Fedora](https://github.com/diogopessoa/my-packages-lists/blob/main/fedora-packages-list.md)
+
 ## Fedora Workstation
-- [📋️ Lista de Aplicativos](https://github.com/diogopessoa/my-packages-lists/blob/main/fedora-packages-list.md)
 - [⬇️ Script Pós-install Fedora Workstation](https://github.com/diogopessoa/fedora-flatpak-setup)
 
 ## Fedora Silverblue
