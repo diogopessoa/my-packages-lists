@@ -182,7 +182,6 @@ O programa [Save Desktop](https://flathub.org/en/apps/io.github.vikdevelop.SaveD
 ## Minha lista de Script e Guia de Instalação
 
 #### Fedora Workstation
-- [📋️ Lista de Aplicativos](https://github.com/diogopessoa/my-packages-lists/blob/main/fedora-packages-list.md)
 - [⬇️ Script Pós-install Fedora Workstation](https://github.com/diogopessoa/fedora-flatpak-setup)
 
 #### Fedora Silverblue
