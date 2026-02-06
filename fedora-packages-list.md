@@ -110,7 +110,7 @@ Após instalar o SyncThingy (Flatpak):
  - no navegador de internet, crie um atalho para o menu de aplicativos.
  - agora pode remover a extensão 'AppIndicator'
 
-## GNOME Shell Extensions
+### GNOME Shell Extensions
 - Caffeine
 - Clipboard indicator @tudomatu.com
 - Compact top bar @metehan
@@ -123,14 +123,14 @@ Após instalar o SyncThingy (Flatpak):
 - Vitals @corecoding
 - Window title is back@fthx
 
-## Extensões de Navegador
+### Extensões de Navegador
 - Dark Reader
 - RainDrop.io
 - Mate Translate
 - Adguard (o Brave não precisa)
 - Seek Subtitles for YouTube
 
-## Brave Ajustes 
+### Brave Ajustes 
 
 Menu, Configurações...
 
@@ -149,6 +149,12 @@ Menu, Configurações...
 - Widevine
 - Indexar outros mecanismos de pesquisa
 - Economia de memória
+
+### Anki addons
+- Deck progress bar
+- Passfail 2 remove the easy and hard buttons
+- Review heatmap
+- Smart keyboard
 
 ## Atalhos de Teclado Personalizados
 #### Atalhos de programas
