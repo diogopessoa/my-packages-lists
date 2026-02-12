@@ -72,10 +72,11 @@ flatpak install --system --assumeyes flathub org.gtk.Gtk3theme.adw-gtk3 org.gtk.
 ## Pós Instalação Fedora
 
 ### Script para Workstation 
-- [Script Pós-Instalação Fedora Silverblue](https://gist.github.com/diogopessoa/d66ec201068ac799da7a25f996be5cfe#file-pos-install-silverblue-sh)
+- [Script Pós-install Fedora Workstation](https://github.com/diogopessoa/fedora-flatpak-setup)
 
 ### Script para Silverblue
-- [Script Pós-install Fedora Workstation](https://github.com/diogopessoa/fedora-flatpak-setup)
+- [Script Pós-Instalação Fedora Silverblue](https://gist.github.com/diogopessoa/d66ec201068ac799da7a25f996be5cfe#file-pos-install-silverblue-sh)
+
   
 
 ### Pacotes RPM
