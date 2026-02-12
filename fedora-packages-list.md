@@ -156,6 +156,40 @@ Menu, Configurações...
 - Review heatmap
 - Smart keyboard
 
+### SyncThingy
+
+Abre **WebUI GUI - Pastas**
+
+**Obsidian**
+-  ID da pasta: gfaaq-gyot4
+-  Pasta: /var/home/diogo/Imagens/Redmi 12S Camera
+
+- Filtros:
+``` 
+(?d).DS_Store
+(?d).thumbnails
+(?d).trashed-*
+(?d).stversions
+(?d).stfolder
+(?d)**/.~lock.*#
+(?d)**/~$*
+(?d)**/.*.tmp
+(?d)**/*.tmp
+(?d)**/*.TMP
+(?d)**/cache/
+(?d)**/Cache/
+(?d)**/temp/
+(?d)**/Temp/
+(?i)**/.obsidian/plugins/*/data.*
+(?i)**/.obsidian/*.json
+(?i)**/.obsidian/workspace
+(?i)**/.obsidian/core-plugins.json
+```
+**Redmi 12S Camera** 
+- Filtros (nada)
+- ID da pasta:	aoj9k-47hzk
+- Pasta: /var/home/diogo/Documentos/Obsidian
+
 ## Atalhos de Teclado Personalizados
 #### Atalhos de programas
 - Terminal Ptyxis: comando `ptyxis`, atalho `Super+T`
