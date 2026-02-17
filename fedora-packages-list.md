@@ -97,16 +97,18 @@ rpm-ostree install fish distrobox adw-gtk3-theme
 - pkexec btrfs-assistant (execução no atalho do menu)
 
 ### SyncThing 
-Após instalar o SyncThingy (Flatpak):
-- instale a extensão 'AppIndicator and KStatusNotifierItem';
-- Configuração:
+Após instalar o SyncThingy (Flatpak), instale a extensão `AppIndicator and KStatusNotifierItem`.
+
+Configuração:
+``` 
  - Clique com o botão direito do mouse no ícone do SyncThiny na bandeja do sistema
  - Selecione Configurações
  - Pressione o botão "Instalar como serviço do sistema"
  - Pressione "Copiar para a área de transferência"
  - Abra o terminal
  - Cole o comando e pressione Enter e reinicie o sistema.
- - 
+``` 
+   
 #### Atalho Syncthing WebUI
  - no navegador de internet, crie um atalho para o menu de aplicativos.
  - agora pode remover a extensão 'AppIndicator'
@@ -210,7 +212,6 @@ Abre **WebUI GUI - Pastas**
 #### Navegação
 - Mover a janela do espaço de trabalho à direita: `Alt+Super+Page Down`
 - Mover a janela do espaço de trabalho à esquerda: `Alt+Super+Page Up`
-- 
 
 
 ## Pasta "share" para compartilhamentos
