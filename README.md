@@ -7,7 +7,7 @@
 - [⬇️ Script Pós-install Fedora Workstation](https://github.com/diogopessoa/fedora-flatpak-setup)
 
 ## Fedora Silverblue
-- [⬇️ Script Pós-Instalação do Fedora Silverblue ](https://gist.github.com/diogopessoa/d66ec201068ac799da7a25f996be5cfe)
+- [⬇️ Script Pós-Instalação do Fedora Silverblue](https://github.com/diogopessoa/silverblue-post-install)
 - [⬇️ Guia Pós-Instalação do Fedora Silverblue](https://github.com/diogopessoa/my-packages-lists/blob/main/silverblue/pos-install-fedora-silverblue.md)
 - [📦️ Distrobox Container Auto-Upgrade](https://github.com/diogopessoa/distrobox-container-auto-upgrade)
 - [🍺 Homebrew - Instalação no Fedora Silverblue](https://github.com/diogopessoa/my-packages-lists/blob/main/silverblue/brew-fedora-silverblue.md)
