@@ -124,6 +124,8 @@ Configuração:
 - ScreenToSpace
 - Quick setting audio panel
 - Vitals @corecoding
+  - >Fixing it only requires going into Vital's settings and changing the storage path from `/` to `/sysroot`
+  - [Vitals stopped reporting Disk data on Fedora](https://github.com/corecoding/Vitals/issues/477#issuecomment-4950507147)
 - Window title is back@fthx
 
 ### Extensões de Navegador
