@@ -197,7 +197,8 @@ Abre **WebUI GUI - Pastas**
 #### Atalhos de programas
 - Terminal Ptyxis: comando `ptyxis`, atalho `Super+T`
 - Smile emojis: comando `/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=smile it.mijorus.smile`, atalho `Super+;` 
-- Collector: comando `/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=collector it.mijorus.collector`, atalho `Super+C`
+- Collector: comando `/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=collector it.mijorus.collector`, atalho `Super++Alt+C`
+- Clipboard Indicator: comando direto nas configurações do aplicativo. atalho `Super+C`
 
 #### Atalhos Som e Mídia
 - Aumentar volume: `Alt+Seta_Acima`
