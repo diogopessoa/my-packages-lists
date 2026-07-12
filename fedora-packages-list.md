@@ -1,7 +1,7 @@
 
 # Lista de Programas e Ajustes que uso no Fedora
 
-## Lista de programas Flatpak que tenho instalado
+## Flatpak Instalados
 
 | ID application                                  | Nome                               |
 |-------------------------------------------------|------------------------------------|
@@ -63,7 +63,7 @@
 | Warehouse |                       io.github.flattool.Warehouse   |          
 | Zen |                            app.zen_browser.zen |     
      
-### Instalar a Lista de Flatpak de uma vez
+### Instalar Flatpak
 
 ```bash 
 flatpak install --system --assumeyes flathub org.gtk.Gtk3theme.adw-gtk3 org.gtk.Gtk3theme.adw-gtk3-dark org.gnome.baobab com.bitwarden.desktop com.brave.Browser org.gnome.Boxes org.gnome.Calculator org.gnome.Calendar org.gnome.Snapshot it.mijorus.collector io.github.wartybix.Constrict com.github.finefindus.eyedropper org.gnome.Contacts io.github.thetumultuousunicornofdarkness.cpu-x org.gnome.SimpleScan com.ranfdev.DistroShelf com.github.wwmm.easyeffects org.gnome.TextEditor com.github.Bleuzen.FFaudioConverter com.github.tchx84.Flatseal org.gnome.font-viewer de.haeckerfelix.Fragments org.freefilesync.FreeFileSync com.github.neithern.g4music org.gnome.FileRoller com.mattjakeman.ExtensionManager fr.handbrake.ghb org.gnome.Shotwell.HEIC io.github.flattool.Ignition org.freedesktop.Platform.VAAPI.Intel org.localsend.localsend_app page.codeberg.libre_menu_editor.LibreMenuEditor io.missioncenter.MissionCenter org.feichtmeier.Musicpod com.obsproject.Studio md.obsidian.Obsidian org.onlyoffice.desktopeditors com.github.jeromerobert.pdfarranger org.gnome.World.PikaBackup com.protonvpn.www net.davidotek.pupgui2 page.tesk.Refine org.gnome.Logs org.gnome.clocks org.gnome.Showtime com.rustdesk.RustDesk org.gnome.Shotwell it.mijorus.smile com.valvesoftware.Steam com.github.zocker_160.SyncThingy org.telegram.desktop io.github.nokse22.teleprompter org.gnome.gitlab.YaLTeR.VideoTrimmer org.gnome.Papers org.gnome.Loupe io.github.flattool.Warehouse app.zen_browser.zen
