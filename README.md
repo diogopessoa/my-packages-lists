@@ -8,7 +8,7 @@
 
 ## Fedora Silverblue
 - [⬇️ Pós Instalação Mínima - script](https://github.com/diogopessoa/silverblue-post-install)
-- [⬇️ Fedora One - script pessoal](https://github.com/diogopessoa/silverblue-one) 
+- [⬇️ Silvervlue-One - script pessoal](https://github.com/diogopessoa/silverblue-one) 
 - [⬇️ Guia Pós-Instalação do Fedora Silverblue](https://github.com/diogopessoa/my-package-lists/blob/main/silverblue/pos-install-fedora-silverblue.md)
 - [📦️ Distrobox - script](https://github.com/diogopessoa/distrobox-upgrade)
 - [🍺 Homebrew - script](https://github.com/diogopessoa/brew-update)
