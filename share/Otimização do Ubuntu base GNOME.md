@@ -4,7 +4,79 @@ tags:
   - ubuntu
 ---
 
-# Otimização do Ubuntu Gnome para PC antigo
+# Otimização para Ubuntu e Zorin OS para PC antigo
+
+## Script Básico
+
+```bash
+#!/usr/bin/env bash
+
+# Author: Diogo Pessoa
+# Target: Ubuntu 25.04+; Zorin OS 18
+
+set -euo pipefail
+
+# ---------------- Verificação ----------------
+if [[ $EUID -eq 0 ]]; then
+    echo "Run this script as a standard user: ./install.sh"
+    exit 1
+fi
+
+# ---------------- Colors ----------------
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+BLUE='\033[0;34m'
+BOLD='\033[1m'
+NC='\033[0m'
+
+# ---------------- Sudo Keep-alive ----------------
+sudo -v
+
+while true; do
+    sudo -n true
+    sleep 60
+    kill -0 "$$" || exit
+done 2>/dev/null &
+
+# ---------------- Status Variables ----------------
+status_network="${RED} ✗${NC}"
+status_snapd="${RED} ✗${NC}"
+
+# 1. ---------------- Update APT repositories ----------------
+echo -e "\n▶ Updating APT package lists..."
+sudo apt update
+
+# 2. ---------------- Remove Snap ----------------
+echo -e "\n▶ Removing Snap and snapd..."
+
+if sudo apt remove --purge -y snapd; then
+    sudo rm -rf /snap
+    sudo rm -rf /var/snap
+    sudo rm -rf /var/lib/snapd
+    rm -rf "$HOME/snap"
+
+    status_snapd="${GREEN} ✓${NC}"
+fi
+
+# 3. ---------------- Disable Network wait-online ----------------
+echo -e "\n▶ Disabling NetworkManager-wait-online.service..."
+
+if sudo systemctl disable NetworkManager-wait-online.service 2>/dev/null; then
+    status_network="${GREEN} ✓${NC}"
+fi
+
+
+# 4. ---------------- Summary ----------------
+echo -e "\n▶ Summary:"
+echo -e " $status_network NetworkManager-wait-online disabled"
+echo -e " $status_snapd Snap and snapd removed"
+
+echo ""
+echo -e "${BLUE}${BOLD}Restart the system to apply all changes.${NC}"
+read -rp "Press Enter to close..."
+echo ""
+``` 
+
 ## 1. Recomendação de Memória Virtual zRAM
 
 ### Configurar zRAM no Ubuntu base
