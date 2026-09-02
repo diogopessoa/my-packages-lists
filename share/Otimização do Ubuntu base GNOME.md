@@ -41,6 +41,7 @@ done 2>/dev/null &
 # ---------------- Status Variables ----------------
 status_network="${RED} ✗${NC}"
 status_snapd="${RED} ✗${NC}"
+status_swappiness="${RED} ✗${NC}"
 
 # 1. ---------------- Update APT repositories ----------------
 echo -e "\n▶ Updating APT package lists..."
@@ -65,11 +66,28 @@ if sudo systemctl disable NetworkManager-wait-online.service 2>/dev/null; then
     status_network="${GREEN} ✓${NC}"
 fi
 
+# 4. ---------------- Set Swappiness ----------------
+echo -e "\n▶ Setting vm.swappiness=10..."
 
-# 4. ---------------- Summary ----------------
+SWAPPINESS_CONF="/etc/sysctl.d/99-swappiness.conf"
+
+# Remove linhas anteriores de vm.swappiness nesse arquivo (se houver)
+if sudo test -f "$SWAPPINESS_CONF"; then
+    sudo sed -i '/^vm\.swappiness=/d' "$SWAPPINESS_CONF" || true
+fi
+
+# Adiciona a nova configuração
+if echo 'vm.swappiness=10' | sudo tee -a "$SWAPPINESS_CONF" >/dev/null; then
+    # Aplica imediatamente (ignora erros se o kernel não permitir)
+    sudo sysctl -p "$SWAPPINESS_CONF" 2>/dev/null || true
+    status_swappiness="${GREEN} ✓${NC}"
+fi
+
+# 5. ---------------- Summary ----------------
 echo -e "\n▶ Summary:"
 echo -e " $status_network NetworkManager-wait-online disabled"
 echo -e " $status_snapd Snap and snapd removed"
+echo -e " $status_swappiness vm.swappiness set to 10"
 
 echo ""
 echo -e "${BLUE}${BOLD}Restart the system to apply all changes.${NC}"
